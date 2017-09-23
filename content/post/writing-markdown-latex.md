@@ -71,7 +71,7 @@ See the [Emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/) f
 I :heart: Academic :smile:
 
 ## Blockquote
-
+    
     > This is a blockquote.
 
 > This is a blockquote.

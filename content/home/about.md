@@ -12,31 +12,30 @@ weight = 1
 # List your academic interests.
 [interests]
   interests = [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "Computational Genomics",
+    "Single Cell Sequencing",
+    "Precision Medicine",
+    "Data Visualization"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
-  year = 2012
+  course = "M.Sc. in Molecular Biotechnology"
+  institution = "University Heidelberg"
+  year = 2018
 
 [[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
+  course = "B.Sc. in Molecular Biotechnology"
+  institution = "University Heidelberg"
+  year = 2015
 
-[[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
- 
 +++
+
+### This site is currently under construction 
+### Powered by [Hugo](https://gohugo.io/) and [blogdown](https://github.com/rstudio/blogdown)
 
 # Biography
 
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Simon Steiger is a student of molecular biotechnology at the insitute for pharmacy and molecular biotechnology at University Heidelberg. His specialization is in bioinformatics with an special emphasis on genomics and the work with single cell sequencing data. He is currently pursuing a master degree.   
+For his bachelor thesis he worked in the Computational Oncology lab at the supervised by Carl Herrmann and Naveed Ishaque at the  [eilslabs](https://ibios.dkfz.de/tbi/computational-oncology). 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
