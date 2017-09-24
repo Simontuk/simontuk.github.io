@@ -12,10 +12,10 @@ weight = 1
 # List your academic interests.
 [interests]
   interests = [
-    "Computational Genomics",
-    "Single Cell Sequencing",
-    "Precision Medicine",
-    "Data Visualization"
+	"Computational Genomics",
+	"Single Cell Sequencing",
+	"Precision Medicine",
+	"Data Visualization"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -31,11 +31,14 @@ weight = 1
 
 +++
 
-### This site is currently under construction 
-### Powered by [Hugo](https://gohugo.io/) and [blogdown](https://github.com/rstudio/blogdown)
+### This site is currently under construction
+### Powered by [Hugo][1] and [blogdown][2]
 
 # Biography
 
-Simon Steiger is a student of molecular biotechnology at the insitute for pharmacy and molecular biotechnology at University Heidelberg. His specialization is in bioinformatics with an special emphasis on genomics and the work with single cell sequencing data. He is currently pursuing a master degree.   
-For his bachelor thesis he worked in the Computational Oncology lab at the supervised by Carl Herrmann and Naveed Ishaque at the  [eilslabs](https://ibios.dkfz.de/tbi/computational-oncology). 
+Simon Steiger is a student of molecular biotechnology at the insitute for pharmacy and molecular biotechnology at University Heidelberg. His specialization is in bioinformatics with an special emphasis on genomics and the work with single cell sequencing data. He is currently pursuing a master degree.  
+For his bachelor thesis he worked in the Computational Oncology lab supervised by Carl Herrmann and Naveed Ishaque at the  [eilslabs][3]. 
 
+[1]:	https://gohugo.io/
+[2]:	https://github.com/rstudio/blogdown
+[3]:	https://ibios.dkfz.de/tbi/computational-oncology
