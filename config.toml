@@ -9,10 +9,10 @@ math = true
 
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+disqusShortname = "simontuk"
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-57035854-2"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"

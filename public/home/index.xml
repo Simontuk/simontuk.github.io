@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Simon Steiger</title>
-    <link>http://simontuk.github.io/home/</link>
+    <link>/home/</link>
     <description>Recent content in Homes on Simon Steiger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
