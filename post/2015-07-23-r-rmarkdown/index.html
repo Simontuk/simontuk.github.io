@@ -32,14 +32,27 @@
   
 
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-57035854-2', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
 
-  <link rel="alternate" href="http://simontuk.github.io/index.xml" type="application/rss+xml" title="Simon Steiger">
-  <link rel="feed" href="http://simontuk.github.io/index.xml" type="application/rss+xml" title="Simon Steiger">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Simon Steiger">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Simon Steiger">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://simontuk.github.io/post/2015-07-23-r-rmarkdown/">
+  <link rel="canonical" href="/post/2015-07-23-r-rmarkdown/">
 
   
 
@@ -194,35 +207,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fsimontuk.github.io%2fpost%2f2015-07-23-r-rmarkdown%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f2015-07-23-r-rmarkdown%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Hello%20R%20Markdown&amp;url=http%3a%2f%2fsimontuk.github.io%2fpost%2f2015-07-23-r-rmarkdown%2f"
+         href="https://twitter.com/intent/tweet?text=Hello%20R%20Markdown&amp;url=%2fpost%2f2015-07-23-r-rmarkdown%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fsimontuk.github.io%2fpost%2f2015-07-23-r-rmarkdown%2f&amp;title=Hello%20R%20Markdown"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f2015-07-23-r-rmarkdown%2f&amp;title=Hello%20R%20Markdown"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fsimontuk.github.io%2fpost%2f2015-07-23-r-rmarkdown%2f&amp;title=Hello%20R%20Markdown"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f2015-07-23-r-rmarkdown%2f&amp;title=Hello%20R%20Markdown"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Hello%20R%20Markdown&amp;body=http%3a%2f%2fsimontuk.github.io%2fpost%2f2015-07-23-r-rmarkdown%2f">
+         href="mailto:?subject=Hello%20R%20Markdown&amp;body=%2fpost%2f2015-07-23-r-rmarkdown%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -287,12 +300,12 @@ Figure 1: A fancy pie chart.
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="http://simontuk.github.io/post/migrate-from-jekyll/"><span
+    <li class="previous"><a href="/post/migrate-from-jekyll/"><span
       aria-hidden="true">&larr;</span> Migrate from Jekyll to Hugo</a></li>
     
 
     
-    <li class="next"><a href="http://simontuk.github.io/post/writing-markdown-latex/">Writing content with Markdown, LaTeX, and Shortcodes <span
+    <li class="next"><a href="/post/writing-markdown-latex/">Writing content with Markdown, LaTeX, and Shortcodes <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
@@ -302,6 +315,29 @@ Figure 1: A fancy pie chart.
 
 <div class="article-container">
   
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "simontuk" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
 
 </div>
 
