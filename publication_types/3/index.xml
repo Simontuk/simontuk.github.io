@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>3 on Simon Steiger</title>
-    <link>/publication_types/3/</link>
+    <link>http://simontuk.github.io/publication_types/3/</link>
     <description>Recent content in 3 on Simon Steiger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Coming soon</title>
-      <link>/publication/coming-soon/</link>
+      <link>http://simontuk.github.io/publication/coming-soon/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/coming-soon/</guid>
+      <guid>http://simontuk.github.io/publication/coming-soon/</guid>
       <description>&lt;p&gt;Stay tuned, publications will be coming up soon. 😄&lt;/p&gt;
 </description>
     </item>
