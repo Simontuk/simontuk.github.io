@@ -915,6 +915,24 @@ Figure 1: A fancy pie chart.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div id=&#34;a-huge-plot-scatter-plot-matrix&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;A huge plot (scatter plot matrix)&lt;/h1&gt;
+&lt;p&gt;One disadvantage of &lt;code&gt;recordPlot()&lt;/code&gt; is that it may not be able to record huge plots due to memory limits, e.g. a scatter plot matrix of tens of thousands of points:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# generate some random data
+dat = matrix(runif(100000), ncol=5)
+dat[, 3] = -.2 * dat[, 1] + .8 * dat[, 2] # to make the plot less boring&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pairs(dat)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But scatter plots with such a large number of points are usually difficult to read (basically you can see nothing), so we’d better use some alternative ways to visualize them. For example, we can use 2D density estimates and draw contour plots, or just plot the LOWESS curve.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dens2d = function(x, y, ...) {
+  library(MASS)
+  res = kde2d(x, y)
+  with(res, contour(x, y, z, add = TRUE))
+}
+pairs(dat, lower.panel = dens2d, upper.panel = function(x, y, ...) {
+  lines(lowess(y ~ x), col = &amp;#39;red&amp;#39;)
+})&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://simontuk.github.io/post/2015-07-23-r-rmarkdown_files/figure-html/line-contour-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
