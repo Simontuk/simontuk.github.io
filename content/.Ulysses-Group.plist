@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>createMarkedFile</key>
-	<integer>0</integer>
+	<false/>
 	<key>resolutionData</key>
 	<dict>
 		<key>createMarkedFile</key>
@@ -15,20 +15,22 @@
 				<key>explicitUnassignment</key>
 				<true/>
 				<key>firstUnassignment</key>
-				<real>527925059.724011</real>
+				<real>528060068.89869499</real>
 				<key>lastModification</key>
-				<real>527925059.724011</real>
+				<real>528060068.89869499</real>
 				<key>version</key>
 				<dict>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
 					<integer>6</integer>
+					<key>8004599E-0FB6-4ED0-A2CA-4AF31CB7E3A7</key>
+					<integer>3</integer>
 				</dict>
 			</dict>
 		</dict>
 		<key>sheetOrder</key>
-		<real>527924992.71605903</real>
+		<real>528059948.71880299</real>
 		<key>userIconName</key>
-		<real>527925118.31852603</real>
+		<real>528059970.885432</real>
 	</dict>
 	<key>sheetClusters</key>
 	<array>
@@ -37,11 +39,11 @@
 		</array>
 	</array>
 	<key>sheetOrder</key>
-	<string>modificationDate</string>
+	<string>manual</string>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
 	<key>userIconName</key>
-	<string>Cloud</string>
+	<string>Github</string>
 	<key>versioning</key>
 	<dict>
 		<key>createMarkedFile</key>
@@ -53,16 +55,22 @@
 		<dict>
 			<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
 			<integer>6</integer>
+			<key>8004599E-0FB6-4ED0-A2CA-4AF31CB7E3A7</key>
+			<integer>3</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>
 			<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
+			<integer>1</integer>
+			<key>8004599E-0FB6-4ED0-A2CA-4AF31CB7E3A7</key>
 			<integer>1</integer>
 		</dict>
 		<key>userIconName</key>
 		<dict>
 			<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
 			<integer>1</integer>
+			<key>8004599E-0FB6-4ED0-A2CA-4AF31CB7E3A7</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 </dict>
