@@ -1,0 +1,14 @@
+{{ range where .Data.Pages "Section" "post" }}
+{{ $url := (printf "/images/index/%s" .Title) }}
+{{ $folder := (printf "/static/images/index/%s" .Title) }}
+{{ $files := readDir $folder }}
+<div class="index-post">
+    <a href="{{ .Permalink }}">
+  {{ range $files }}
+  <figure>
+      <img src="{{ $url }}/{{ .Name | urlize }}">
+  </figure>
+  {{ end }}
+      </a>
+</div>
+{{ end }}

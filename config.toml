@@ -196,4 +196,4 @@ defaultContentLanguageInSubdir = false
 [languages.en]
   languageCode = "en-us"
 
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$","\\.Ulysses.*.plist","\\.DS_Store"]

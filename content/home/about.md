@@ -37,7 +37,7 @@ weight = 1
 # Biography
 
 Simon Steiger is a student of molecular biotechnology at the insitute for pharmacy and molecular biotechnology at University Heidelberg. His specialization is in bioinformatics with an special emphasis on genomics and the work with single cell sequencing data. He is currently pursuing a master degree.  
-For his bachelor thesis he worked in the Computational Oncology lab supervised by Carl Herrmann and Naveed Ishaque at the  [eilslabs][3]. 
+For his bachelor thesis he worked in the Computational Oncology lab supervised by Carl Herrmann and Naveed Ishaque at the [eilslabs][3]. 
 
 [1]:	https://gohugo.io/
 [2]:	https://github.com/rstudio/blogdown
