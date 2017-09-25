@@ -3,3 +3,4 @@
 .RData
 .Ruserdata
 .plist
+"\\.Ulysses.*.plist"
