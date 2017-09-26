@@ -5,57 +5,51 @@ https://keybase.io/simontuk
 I hereby claim:
 
   * I am an admin of https://simontuk.github.io
-    * I am simontuk (https://keybase.io/simontuk) on keybase.
-      * I have a public key 
-      ASAsNxU8Qm_9wQHljIB84G3GjVzudJiPBeBemeTlqtmBTgo
+  * I am simontuk (https://keybase.io/simontuk) on keybase.
+  * I have a public key ASAsNxU8Qm_9wQHljIB84G3GjVzudJiPBeBemeTlqtmBTgo
 
-      To do so, I am signing this object:
+To do so, I am signing this object:
 
-      {
-        "body": {
-            "key": {
-                  "eldest_kid": 
-                  "01202c37153c426ffdc101e58c807ce06dc68d5cee74988f05e05e99e4e5aad9814e0a",
-                        "host": "keybase.io",
-                              "kid": 
-                              "01202c37153c426ffdc101e58c807ce06dc68d5cee74988f05e05e99e4e5aad9814e0a",
-                                    "uid": 
-                                    "6cf9b76f891e892f7da8b62d5f7d7619",
-                                          "username": "simontuk"
-                                              },
-                                                  "merkle_root": {
-                                                        "ctime": 
-                                                        1506469269,
-                                                              "hash": 
-                                                              "1b82bf7fbc39c25d2bf124e69e21cc3a81e1dba6373f50a8325e304331683124d2b4641dfd73f3fe7b7e19ab68fe28618bbb30d0ba7f86f80a2a39a235b73433",
-                                                                    "hash_meta": "ec190e3cebb3265f288857cc8dd87d6d0cf07d2aea7e7202a3694bb9fcbec90f",
-                                                                          "seqno": 1461921
-                                                                              },
-                                                                                  "service": {
-                                                                                        "hostname": "simontuk.github.io",
-                                                                                              "protocol": "https:"
-                                                                                                  },
-                                                                                                      "type": "web_service_binding",
-                                                                                                          "version": 1
-                                                                                                            },
-                                                                                                              "client": {
-                                                                                                                  "name": "keybase.io go client",
-                                                                                                                      "version": "1.0.31"
-                                                                                                                        },
-                                                                                                                          "ctime": 1506469304,
-                                                                                                                            "expire_in": 504576000,
-                                                                                                                              "prev": "88d3d4dc63ae447ba8e6a55987f94bef74be5f2521ce0cba29c82c66f1514f00",
-                                                                                                                                "seqno": 12,
-                                                                                                                                  "tag": "signature"
-                                                                                                                                  }
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01202c37153c426ffdc101e58c807ce06dc68d5cee74988f05e05e99e4e5aad9814e0a",
+      "host": "keybase.io",
+      "kid": "01202c37153c426ffdc101e58c807ce06dc68d5cee74988f05e05e99e4e5aad9814e0a",
+      "uid": "6cf9b76f891e892f7da8b62d5f7d7619",
+      "username": "simontuk"
+    },
+    "merkle_root": {
+      "ctime": 1506469269,
+      "hash": "1b82bf7fbc39c25d2bf124e69e21cc3a81e1dba6373f50a8325e304331683124d2b4641dfd73f3fe7b7e19ab68fe28618bbb30d0ba7f86f80a2a39a235b73433",
+      "hash_meta": "ec190e3cebb3265f288857cc8dd87d6d0cf07d2aea7e7202a3694bb9fcbec90f",
+      "seqno": 1461921
+    },
+    "service": {
+      "hostname": "simontuk.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.31"
+  },
+  "ctime": 1506469304,
+  "expire_in": 504576000,
+  "prev": "88d3d4dc63ae447ba8e6a55987f94bef74be5f2521ce0cba29c82c66f1514f00",
+  "seqno": 12,
+  "tag": "signature"
+}
 
-                                                                                                                                  which yields the signature:
+which yields the signature:
 
-                                                                                                                                  hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgLDcVPEJv/cEB5YyAfOBtxo1c7nSYjwXgXpnk5arZgU4Kp3BheWxvYWTFA0t7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMmMzNzE1M2M0MjZmZmRjMTAxZTU4YzgwN2NlMDZkYzY4ZDVjZWU3NDk4OGYwNWUwNWU5OWU0ZTVhYWQ5ODE0ZTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMmMzNzE1M2M0MjZmZmRjMTAxZTU4YzgwN2NlMDZkYzY4ZDVjZWU3NDk4OGYwNWUwNWU5OWU0ZTVhYWQ5ODE0ZTBhIiwidWlkIjoiNmNmOWI3NmY4OTFlODkyZjdkYThiNjJkNWY3ZDc2MTkiLCJ1c2VybmFtZSI6InNpbW9udHVrIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA2NDY5MjY5LCJoYXNoIjoiMWI4MmJmN2ZiYzM5YzI1ZDJiZjEyNGU2OWUyMWNjM2E4MWUxZGJhNjM3M2Y1MGE4MzI1ZTMwNDMzMTY4MzEyNGQyYjQ2NDFkZmQ3M2YzZmU3YjdlMTlhYjY4ZmUyODYxOGJiYjMwZDBiYTdmODZmODBhMmEzOWEyMzViNzM0MzMiLCJoYXNoX21ldGEiOiJlYzE5MGUzY2ViYjMyNjVmMjg4ODU3Y2M4ZGQ4N2Q2ZDBjZjA3ZDJhZWE3ZTcyMDJhMzY5NGJiOWZjYmVjOTBmIiwic2Vxbm8iOjE0NjE5MjF9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoic2ltb250dWsuZ2l0aHViLmlvIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzEifSwiY3RpbWUiOjE1MDY0NjkzMDQsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiODhkM2Q0ZGM2M2FlNDQ3YmE4ZTZhNTU5ODdmOTRiZWY3NGJlNWYyNTIxY2UwY2JhMjljODJjNjZmMTUxNGYwMCIsInNlcW5vIjoxMiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDR4iV23tWevPkWBJwH2BNxvUvoAES5mP0rvAr3UWXt2WJHPPvh1aJD2rgOa9K4GJQTIE5ZBdp0vKEby59OzdQEqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg5M77cpr0gRBfCDyh3ALHivJk/IgFtHoDqIDyP7lreiijdGFnzQICp3ZlcnNpb24B
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgLDcVPEJv/cEB5YyAfOBtxo1c7nSYjwXgXpnk5arZgU4Kp3BheWxvYWTFA0t7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMmMzNzE1M2M0MjZmZmRjMTAxZTU4YzgwN2NlMDZkYzY4ZDVjZWU3NDk4OGYwNWUwNWU5OWU0ZTVhYWQ5ODE0ZTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMmMzNzE1M2M0MjZmZmRjMTAxZTU4YzgwN2NlMDZkYzY4ZDVjZWU3NDk4OGYwNWUwNWU5OWU0ZTVhYWQ5ODE0ZTBhIiwidWlkIjoiNmNmOWI3NmY4OTFlODkyZjdkYThiNjJkNWY3ZDc2MTkiLCJ1c2VybmFtZSI6InNpbW9udHVrIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA2NDY5MjY5LCJoYXNoIjoiMWI4MmJmN2ZiYzM5YzI1ZDJiZjEyNGU2OWUyMWNjM2E4MWUxZGJhNjM3M2Y1MGE4MzI1ZTMwNDMzMTY4MzEyNGQyYjQ2NDFkZmQ3M2YzZmU3YjdlMTlhYjY4ZmUyODYxOGJiYjMwZDBiYTdmODZmODBhMmEzOWEyMzViNzM0MzMiLCJoYXNoX21ldGEiOiJlYzE5MGUzY2ViYjMyNjVmMjg4ODU3Y2M4ZGQ4N2Q2ZDBjZjA3ZDJhZWE3ZTcyMDJhMzY5NGJiOWZjYmVjOTBmIiwic2Vxbm8iOjE0NjE5MjF9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoic2ltb250dWsuZ2l0aHViLmlvIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzEifSwiY3RpbWUiOjE1MDY0NjkzMDQsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiODhkM2Q0ZGM2M2FlNDQ3YmE4ZTZhNTU5ODdmOTRiZWY3NGJlNWYyNTIxY2UwY2JhMjljODJjNjZmMTUxNGYwMCIsInNlcW5vIjoxMiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDR4iV23tWevPkWBJwH2BNxvUvoAES5mP0rvAr3UWXt2WJHPPvh1aJD2rgOa9K4GJQTIE5ZBdp0vKEby59OzdQEqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg5M77cpr0gRBfCDyh3ALHivJk/IgFtHoDqIDyP7lreiijdGFnzQICp3ZlcnNpb24B
 
-                                                                                                                                  And finally, I am proving ownership of this host by posting or
-                                                                                                                                  appending to this document.
+And finally, I am proving ownership of this host by posting or
+appending to this document.
 
-                                                                                                                                  View my publicly-auditable identity here: https://keybase.io/simontuk
+View my publicly-auditable identity here: https://keybase.io/simontuk
 
-                                                                                                                                  ==================================================================
+==================================================================
