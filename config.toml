@@ -23,7 +23,7 @@ defaultContentLanguageInSubdir = false
 
 [params]
   name = "Simon Steiger"
-  role = "Master of Science Molecular Biotechnology"
+  role = "cand. mol. biotech."
   organization = "University Heidelberg"
   organization_url = ""
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
