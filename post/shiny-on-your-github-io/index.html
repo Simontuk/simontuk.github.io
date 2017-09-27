@@ -248,74 +248,84 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <div id="how-to-write-a-.rmd-so-you-will-host-a-shiny-application-on-your-homepage-in-the-end" class="section level1">
+      <div id="section-how-to-write-a-.rmd-so-you-will-host-a-shiny-application-on-your-homepage-in-the-end" class="section level1">
 <h1>How to write a .rmd so you will host a shiny application on your homepage in the end?</h1>
-<p>Create the UI for the app. Link to <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/">Tutorial</a> I’m following. ## UI to create an interactive histogram:</p>
+<p>Create the UI for the app. Link to <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/">Tutorial</a> I’m following. ## UI to create an interactive histogram: saved as Shinyapp_1/ui.R</p>
 <pre class="r"><code>library(shiny)
+library(ggplot2)
 
-# Define UI for app that draws a histogram ----
-ui &lt;- fluidPage(
+dataset &lt;- diamonds
 
-  # App title ----
-  titlePanel(&quot;Hello Shiny!&quot;),
-
-  # Sidebar layout with input and output definitions ----
-  sidebarLayout(
-
-    # Sidebar panel for inputs ----
-    sidebarPanel(
-
-      # Input: Slider for the number of bins ----
-      sliderInput(inputId = &quot;bins&quot;,
-                  label = &quot;Number of bins:&quot;,
-                  min = 1,
-                  max = 50,
-                  value = 30)
-
-    ),
-
-    # Main panel for displaying outputs ----
-    mainPanel(
-
-      # Output: Histogram ----
-      plotOutput(outputId = &quot;distPlot&quot;)
-
-    )
+fluidPage(
+  
+  titlePanel(&quot;Diamonds Explorer&quot;),
+  
+  sidebarPanel(
+    
+    sliderInput(&#39;sampleSize&#39;, &#39;Sample Size&#39;, min=1, max=nrow(dataset),
+                value=min(1000, nrow(dataset)), step=500, round=0),
+    
+    selectInput(&#39;x&#39;, &#39;X&#39;, names(dataset)),
+    selectInput(&#39;y&#39;, &#39;Y&#39;, names(dataset), names(dataset)[[2]]),
+    selectInput(&#39;color&#39;, &#39;Color&#39;, c(&#39;None&#39;, names(dataset))),
+    
+    checkboxInput(&#39;jitter&#39;, &#39;Jitter&#39;),
+    checkboxInput(&#39;smooth&#39;, &#39;Smooth&#39;),
+    
+    selectInput(&#39;facet_row&#39;, &#39;Facet Row&#39;, c(None=&#39;.&#39;, names(dataset))),
+    selectInput(&#39;facet_col&#39;, &#39;Facet Column&#39;, c(None=&#39;.&#39;, names(dataset)))
+  ),
+  
+  mainPanel(
+    plotOutput(&#39;plot&#39;)
   )
 )</code></pre>
-<div id="r-script-that-works-as-the-server-logic" class="section level2">
+<div id="section-r-script-that-works-as-the-server-logic" class="section level2">
 <h2>R script that works as the server logic:</h2>
-<pre class="r"><code># Define server logic required to draw a histogram ----
-server &lt;- function(input, output) {
+<p>saved as Shinyapp_1/server.R</p>
+<pre class="r"><code>library(shiny)
+library(ggplot2)
 
-  # Histogram of the Old Faithful Geyser Data ----
-  # with requested number of bins
-  # This expression that generates a histogram is wrapped in a call
-  # to renderPlot to indicate that:
-  #
-  # 1. It is &quot;reactive&quot; and therefore should be automatically
-  #    re-executed when inputs (input$bins) change
-  # 2. Its output type is a plot
-  output$distPlot &lt;- renderPlot({
-
-    x    &lt;- faithful$waiting
-    bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)
-
-    hist(x, breaks = bins, col = &quot;#75AADB&quot;, border = &quot;white&quot;,
-         xlab = &quot;Waiting time to next eruption (in mins)&quot;,
-         main = &quot;Histogram of waiting times&quot;)
-
-    })
-
+function(input, output) {
+  
+  dataset &lt;- reactive({
+    diamonds[sample(nrow(diamonds), input$sampleSize),]
+  })
+  
+  output$plot &lt;- renderPlot({
+    
+    p &lt;- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
+    
+    if (input$color != &#39;None&#39;)
+      p &lt;- p + aes_string(color=input$color)
+    
+    facets &lt;- paste(input$facet_row, &#39;~&#39;, input$facet_col)
+    if (facets != &#39;. ~ .&#39;)
+      p &lt;- p + facet_grid(facets)
+    
+    if (input$jitter)
+      p &lt;- p + geom_jitter()
+    if (input$smooth)
+      p &lt;- p + geom_smooth()
+    
+    print(p)
+    
+  }, height=700)
+  
 }</code></pre>
-<pre><code>## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.</code></pre>
-<p><div style="width: 100% ; height: 500px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div> Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.</p>
-<pre class="r"><code>shinyApp(ui = ui, server = server)</code></pre>
+<p>Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.</p>
+<pre class="r"><code>appName &lt;- &quot;Shinyapp_1&quot;</code></pre>
+<pre class="r"><code>rsconnect::deployApp(&quot;Shinyapp_1/&quot;,appName = tolower(appName),launch.browser = FALSE)</code></pre>
+<pre class="r"><code>AppUrl &lt;- paste0(&quot;https://simontuk.shinyapps.io/&quot;,tolower(appName),&quot;/&quot;)</code></pre>
 </div>
-<div id="so-how-to-link-to-a-runnign-shiny-app-for-interactive-visualization" class="section level2">
+<div id="section-so-how-to-link-to-a-runnign-shiny-app-for-interactive-visualization" class="section level2">
 <h2>So how to link to a runnign shiny app for interactive visualization?</h2>
 <p>Here I will go through the steps to create a shiny app on shinyapps.io and link to it inside of you rmarkdown file.</p>
 <p>Steps to set up your shinyapps.io account with rsconnect: <a href="http://docs.rstudio.com/shinyapps.io/getting-started.html">shinapps.io</a></p>
+<pre class="r"><code>knitr::include_app(AppUrl, 
+  height = &quot;600px&quot;)</code></pre>
+<iframe src="https://simontuk.shinyapps.io/shinyapp_1/?showcase=0" width="672" height="600px">
+</iframe>
 <pre class="r"><code>knitr::include_app(&quot;https://yihui.shinyapps.io/miniUI/&quot;, 
   height = &quot;600px&quot;)</code></pre>
 <iframe src="https://yihui.shinyapps.io/miniUI/?showcase=0" width="672" height="600px">
