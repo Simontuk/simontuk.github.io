@@ -1,0 +1,61 @@
+---
+title: Shiny on your github.io
+author: Simon Steiger
+date: '2017-09-27'
+slug: shiny-on-your-github-io
+categories:
+  - R
+  - Shiny
+tags:
+  - Shiny
+  - plot
+runtime: shiny
+---
+
+# How to write a .rmd so you will host a shiny application on your homepage in the end?
+
+
+Create the UI for the app. Link to [Tutorial](https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/) I'm following.
+
+## UI to create an interactive histogram:  
+
+saved as `Shinyapp_1/ui.R`
+```{r ui, code=readLines("Shinyapp_1/ui.R"),eval=FALSE,background="#006EB8"}
+```
+
+## R script that works as the server logic:
+saved as `Shinyapp_1/server.R`
+```{r server, code=readLines("Shinyapp_1/server.R"),eval=FALSE,background="#006EB8"}
+```
+
+Simple call to open shiny webapp inside R terminal
+This does not work on your blogdown blog as it is a static website without any server-side R running.
+
+
+```{r warning=FALSE}
+appName <- "Shinyapp_1"
+appExists <- tolower(appName) %in% rsconnect::applications()$name
+```
+
+```{r eval=!appExists}
+a <- rsconnect::deployApp("Shinyapp_1/",appName = tolower(appName),launch.browser = FALSE)
+```
+
+```{r}
+AppUrl <- paste0("https://simontuk.shinyapps.io/",tolower(appName),"/")
+
+```
+
+## So how to link to a runnign shiny app for interactive visualization?
+Here I will go through the steps to create a shiny app on shinyapps.io and link to it inside of you rmarkdown file.  
+
+
+Steps to set up your shinyapps.io account with rsconnect: 
+[shinapps.io](http://docs.rstudio.com/shinyapps.io/getting-started.html)
+
+```{r}
+knitr::include_app(AppUrl, 
+  height = "600px")
+```
+
+
