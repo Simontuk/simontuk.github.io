@@ -527,6 +527,77 @@ Supervised by Stephan Tirier at the lab of <a href="https://ibios.dkfz.de/tbi/in
 <div class="article-list-item" itemscope itemprop="blogPost">
   
   
+  <h3 class="article-title" itemprop="name">
+    <a href="http://simontuk.github.io/post/shiny-on-your-github-io/" itemprop="url">Shiny on your github.io</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      27. Sep 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >, 
+    
+    <a href="/categories/shiny">Shiny</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/shiny">Shiny</a
+    >, 
+    
+    <a href="/tags/plot">plot</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    How to write a .rmd so you will host a shiny application on your homepage in the end? Create the UI for the app. Link to Tutorial I’m following. ## UI to create an interactive histogram:
+library(shiny) # Define UI for app that draws a histogram ---- ui &lt;- fluidPage( # App title ---- titlePanel(&quot;Hello Shiny!&quot;), # Sidebar layout with input and output definitions ---- sidebarLayout( # Sidebar panel for inputs ---- sidebarPanel( # Input: Slider for the number of bins ---- sliderInput(inputId = &quot;bins&quot;, label = &quot;Number of bins:&quot;, min = 1, max = 50, value = 30) ), # Main panel for displaying outputs ---- mainPanel( # Output: Histogram ---- plotOutput(outputId = &quot;distPlot&quot;) ) ) ) R script that works as the server logic: # Define server logic required to draw a histogram ---- server &lt;- function(input, output) { # Histogram of the Old Faithful Geyser Data ---- # with requested number of bins # This expression that generates a histogram is wrapped in a call # to renderPlot to indicate that: # # 1.
+    
+  </div>
+  <p class="read-more">
+    <a href="http://simontuk.github.io/post/shiny-on-your-github-io/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+        
+        
+
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  
   <a href="http://simontuk.github.io/post/getting-started/">
     <img src="/img/headers/getting-started.png" class="article-banner" itemprop="image">
   </a>
@@ -739,78 +810,6 @@ Supervised by Stephan Tirier at the lab of <a href="https://ibios.dkfz.de/tbi/in
 </div>
 
       
-        
-        
-
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://simontuk.github.io/post/2015-07-23-r-rmarkdown/" itemprop="url">Hello R Markdown</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2015-07-23 21:13:14 -0500 -0500" itemprop="datePublished">
-      23. Jul 2015
-    </time>
-  </span>
-
-  
-  
-  
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/r">R</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/r-markdown">R Markdown</a
-    >, 
-    
-    <a href="/tags/plot">plot</a
-    >, 
-    
-    <a href="/tags/regression">regression</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.
-    
-  </div>
-  <p class="read-more">
-    <a href="http://simontuk.github.io/post/2015-07-23-r-rmarkdown/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-      
     
 
   </div>
@@ -965,7 +964,7 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
           
           
           
-          <a href="/tags/plot" style="font-size:0.8rem">plot</a>
+          <a href="/tags/plot" style="font-size:1.65rem">plot</a>
         
           
           
@@ -980,6 +979,13 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
           
           
           <a href="/tags/regression" style="font-size:0.8rem">regression</a>
+        
+          
+          
+          
+          
+          
+          <a href="/tags/shiny" style="font-size:0.8rem">shiny</a>
         
       </div>
     

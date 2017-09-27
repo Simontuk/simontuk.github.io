@@ -46,17 +46,17 @@
     
   
 
-  <link rel="alternate" href="http://simontuk.github.io/tags/plot/index.xml" type="application/rss+xml" title="Simon Steiger">
-  <link rel="feed" href="http://simontuk.github.io/tags/plot/index.xml" type="application/rss+xml" title="Simon Steiger">
+  <link rel="alternate" href="http://simontuk.github.io/categories/shiny/index.xml" type="application/rss+xml" title="Simon Steiger">
+  <link rel="feed" href="http://simontuk.github.io/categories/shiny/index.xml" type="application/rss+xml" title="Simon Steiger">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://simontuk.github.io/tags/plot/">
+  <link rel="canonical" href="http://simontuk.github.io/categories/shiny/">
 
   
 
-  <title>Plot | Simon Steiger</title>
+  <title>Shiny | Simon Steiger</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -156,7 +156,7 @@
 
 <div class="universal-wrapper">
 
-  <h1>Plot</h1>
+  <h1>Shiny</h1>
 
   
 
@@ -168,17 +168,6 @@
       
       How to write a .rmd so you will host a shiny application on your homepage in the end? Create the UI for the app. Link to Tutorial I’m following. ## UI to create an interactive histogram:
 library(shiny) # Define UI for app that draws a histogram &mdash;- ui &lt;- fluidPage( # App title &mdash;- titlePanel(&quot;Hello Shiny!&quot;), # Sidebar layout with input and output definitions &mdash;- sidebarLayout( # Sidebar panel for inputs &mdash;- sidebarPanel( # Input: Slider for the number of bins &mdash;- sliderInput(inputId = &quot;bins&quot;, label = &quot;Number of bins:&quot;, min = 1, max = 50, value = 30) ), # Main panel for displaying outputs &mdash;- mainPanel( # Output: Histogram &mdash;- plotOutput(outputId = &quot;distPlot&quot;) ) ) ) R script that works as the server logic: # Define server logic required to draw a histogram &mdash;- server &lt;- function(input, output) { # Histogram of the Old Faithful Geyser Data &mdash;- # with requested number of bins # This expression that generates a histogram is wrapped in a call # to renderPlot to indicate that: # # 1.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://simontuk.github.io/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></h2>
-    <div class="article-style">
-      
-      R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" target="_blank">http://rmarkdown.rstudio.com</a>.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.
       
     </div>
   </div>
