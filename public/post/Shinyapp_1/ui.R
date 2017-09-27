@@ -2,7 +2,7 @@
 
 library(shiny)
 
-dataset <- iris
+dataset <- datasets::iris
 
 fluidPage(responsive = FALSE,
           fluidRow(style = "padding-bottom: 20px;",
