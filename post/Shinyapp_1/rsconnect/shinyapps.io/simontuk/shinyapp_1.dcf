@@ -5,6 +5,6 @@ account: simontuk
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 219163
-bundleId: 999179
+bundleId: 999191
 url: https://simontuk.shinyapps.io/shinyapp_1/
-when: 1506481150.51172
+when: 1506482077.89525
