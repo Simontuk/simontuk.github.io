@@ -324,8 +324,6 @@ function(input, output) {
 <p>Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.</p>
 <pre class="r"><code>appName &lt;- &quot;Shinyapp_1&quot;
 appExists &lt;- tolower(appName) %in% rsconnect::applications()$name</code></pre>
-<pre><code>## Warning in as.POSIXlt.POSIXct(x, tz = tz): unknown timezone &#39;default/
-## America/New_York&#39;</code></pre>
 <pre class="r"><code>a &lt;- rsconnect::deployApp(&quot;Shinyapp_1/&quot;,appName = tolower(appName),launch.browser = FALSE)</code></pre>
 <pre class="r"><code>AppUrl &lt;- paste0(&quot;https://simontuk.shinyapps.io/&quot;,tolower(appName),&quot;/&quot;)</code></pre>
 </div>
