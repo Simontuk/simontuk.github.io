@@ -1,0 +1,10 @@
+name: shinyapp_1
+title:
+username:
+account: simontuk
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 219163
+bundleId: 999169
+url: https://simontuk.shinyapps.io/shinyapp_1/
+when: 1506480528.67846
