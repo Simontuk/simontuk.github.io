@@ -248,8 +248,9 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <div id="section-how-to-write-a-.rmd-so-you-will-host-a-shiny-application-on-your-homepage-in-the-end" class="section level1">
-<h1>How to write a .rmd so you will host a shiny application on your homepage in the end?</h1>
+      <div id="section-how-to-blog-with-an-embedded-shiny-application" class="section level1">
+<h1>How to blog with an embedded shiny application</h1>
+<p>The challenge to have a embedded shiny-applications is, that it needs to run on a public R-Server.</p>
 <p>Link to <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/">Tutorial</a> I’m following.</p>
 <p>This allows you to create a Shinyapp and include it in a blogpost or rendered html Output of any sort. Here I will show how to create an simple example App, how to deploy it to shinyapps.io and how to include it in the html output of your Rmarkdown file.</p>
 </div>
@@ -264,11 +265,11 @@
 <pre class="r"><code>## ui.R 
 
 library(shiny)
+library(datasets)
 
 dataset &lt;- datasets::iris
 
-fluidPage(responsive = FALSE,
-          fluidRow(style = &quot;padding-bottom: 20px;&quot;,
+fluidPage(fluidRow(style = &quot;padding-bottom: 20px;&quot;,
                    column(4, selectInput(&#39;xcol&#39;, &#39;X Variable&#39;, names(dataset))),
                    column(4, selectInput(&#39;ycol&#39;, &#39;Y Variable&#39;, names(dataset),
                                          selected=names(dataset)[[2]])),
@@ -286,9 +287,10 @@ fluidPage(responsive = FALSE,
 <pre class="r"><code>## server.R
 
 library(shiny)
-library(ggplot2)
 
-function(input, output, session) {
+dataset &lt;- datasets::iris
+
+function(input, output) {
   
   # Combine the selected variables into a new data frame
   selectedData &lt;- reactive({

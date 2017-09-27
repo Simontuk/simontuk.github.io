@@ -15,8 +15,9 @@
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://simontuk.github.io/post/shiny-on-your-github-io/</guid>
-      <description>&lt;div id=&#34;section-how-to-write-a-.rmd-so-you-will-host-a-shiny-application-on-your-homepage-in-the-end&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;How to write a .rmd so you will host a shiny application on your homepage in the end?&lt;/h1&gt;
+      <description>&lt;div id=&#34;section-how-to-blog-with-an-embedded-shiny-application&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How to blog with an embedded shiny application&lt;/h1&gt;
+&lt;p&gt;The challenge to have a embedded shiny-applications is, that it needs to run on a public R-Server.&lt;/p&gt;
 &lt;p&gt;Link to &lt;a href=&#34;https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/&#34;&gt;Tutorial&lt;/a&gt; I’m following.&lt;/p&gt;
 &lt;p&gt;This allows you to create a Shinyapp and include it in a blogpost or rendered html Output of any sort. Here I will show how to create an simple example App, how to deploy it to shinyapps.io and how to include it in the html output of your Rmarkdown file.&lt;/p&gt;
 &lt;/div&gt;
@@ -31,11 +32,11 @@
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## ui.R 
 
 library(shiny)
+library(datasets)
 
 dataset &amp;lt;- datasets::iris
 
-fluidPage(responsive = FALSE,
-          fluidRow(style = &amp;quot;padding-bottom: 20px;&amp;quot;,
+fluidPage(fluidRow(style = &amp;quot;padding-bottom: 20px;&amp;quot;,
                    column(4, selectInput(&amp;#39;xcol&amp;#39;, &amp;#39;X Variable&amp;#39;, names(dataset))),
                    column(4, selectInput(&amp;#39;ycol&amp;#39;, &amp;#39;Y Variable&amp;#39;, names(dataset),
                                          selected=names(dataset)[[2]])),
@@ -53,9 +54,10 @@ fluidPage(responsive = FALSE,
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## server.R
 
 library(shiny)
-library(ggplot2)
 
-function(input, output, session) {
+dataset &amp;lt;- datasets::iris
+
+function(input, output) {
   
   # Combine the selected variables into a new data frame
   selectedData &amp;lt;- reactive({

@@ -1,9 +1,10 @@
 ## server.R
 
 library(shiny)
-library(ggplot2)
 
-function(input, output, session) {
+dataset <- datasets::iris
+
+function(input, output) {
   
   # Combine the selected variables into a new data frame
   selectedData <- reactive({
