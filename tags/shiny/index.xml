@@ -62,31 +62,31 @@ library(shiny)
 library(ggplot2)
 
 function(input, output) {
+  
+  dataset &amp;lt;- reactive({
+    diamonds[sample(nrow(diamonds), input$sampleSize),]
+  })
+  
+  output$plot &amp;lt;- renderPlot({
     
-    dataset &amp;lt;- reactive({
-        diamonds[sample(nrow(diamonds), input$sampleSize), ]
-    })
+    p &amp;lt;- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
     
-    output$plot &amp;lt;- renderPlot({
-        
-        p &amp;lt;- ggplot(dataset(), aes_string(x = input$x, y = input$y)) + geom_point()
-        
-        if (input$color != &amp;quot;None&amp;quot;) 
-            p &amp;lt;- p + aes_string(color = input$color)
-        
-        facets &amp;lt;- paste(input$facet_row, &amp;quot;~&amp;quot;, input$facet_col)
-        if (facets != &amp;quot;. ~ .&amp;quot;) 
-            p &amp;lt;- p + facet_grid(facets)
-        
-        if (input$jitter) 
-            p &amp;lt;- p + geom_jitter()
-        if (input$smooth) 
-            p &amp;lt;- p + geom_smooth()
-        
-        print(p)
-        
-    }, height = 700)
+    if (input$color != &amp;#39;None&amp;#39;)
+      p &amp;lt;- p + aes_string(color=input$color)
     
+    facets &amp;lt;- paste(input$facet_row, &amp;#39;~&amp;#39;, input$facet_col)
+    if (facets != &amp;#39;. ~ .&amp;#39;)
+      p &amp;lt;- p + facet_grid(facets)
+    
+    if (input$jitter)
+      p &amp;lt;- p + geom_jitter()
+    if (input$smooth)
+      p &amp;lt;- p + geom_smooth()
+    
+    print(p)
+    
+  }, height=700)
+  
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;appName &amp;lt;- &amp;quot;Shinyapp_1&amp;quot;
