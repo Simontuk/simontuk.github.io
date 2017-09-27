@@ -250,40 +250,34 @@
     <div class="article-style" itemprop="articleBody">
       <div id="section-how-to-write-a-.rmd-so-you-will-host-a-shiny-application-on-your-homepage-in-the-end" class="section level1">
 <h1>How to write a .rmd so you will host a shiny application on your homepage in the end?</h1>
-<p>Create the UI for the app. Link to <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/">Tutorial</a> I’m following.</p>
+<p>Link to <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/">Tutorial</a> I’m following.</p>
+<p>This allows you to create a Shinyapp and include it in a blogpost or rendered html Output of any sort. Here I will show how to create an simple example App, how to deploy it to shinyapps.io and how to include it in the html output of your Rmarkdown file.</p>
+</div>
+<div id="section-code-to-create-a-shiny-app" class="section level1">
+<h1>Code to create a shiny app:</h1>
+<p>Two files are needed to create a shiny app. <code>ui.R</code> and <code>server.R</code></p>
+<p>The app will be created in the folder where your Rmarkdown is rendered. The name of the folder could be the name of the App you want to create:</p>
+<pre class="r"><code>appName &lt;- &quot;Shinyapp_1&quot;</code></pre>
 <div id="section-ui-to-create-an-interactive-histogram" class="section level2">
 <h2>UI to create an interactive histogram:</h2>
 <p>saved as <code>Shinyapp_1/ui.R</code></p>
 <pre class="r"><code>## ui.R 
 
 library(shiny)
-library(ggplot2)
 
-dataset &lt;- diamonds
+dataset &lt;- iris
 
-fluidPage(
-  
-  titlePanel(&quot;Diamonds Explorer&quot;),
-  
-  sidebarPanel(
-    
-    sliderInput(&#39;sampleSize&#39;, &#39;Sample Size&#39;, min=1, max=nrow(dataset),
-                value=min(1000, nrow(dataset)), step=500, round=0),
-    
-    selectInput(&#39;x&#39;, &#39;X&#39;, names(dataset)),
-    selectInput(&#39;y&#39;, &#39;Y&#39;, names(dataset), names(dataset)[[2]]),
-    selectInput(&#39;color&#39;, &#39;Color&#39;, c(&#39;None&#39;, names(dataset))),
-    
-    checkboxInput(&#39;jitter&#39;, &#39;Jitter&#39;),
-    checkboxInput(&#39;smooth&#39;, &#39;Smooth&#39;),
-    
-    selectInput(&#39;facet_row&#39;, &#39;Facet Row&#39;, c(None=&#39;.&#39;, names(dataset))),
-    selectInput(&#39;facet_col&#39;, &#39;Facet Column&#39;, c(None=&#39;.&#39;, names(dataset)))
-  ),
-  
-  mainPanel(
-    plotOutput(&#39;plot&#39;)
-  )
+fluidPage(responsive = FALSE,
+          fluidRow(style = &quot;padding-bottom: 20px;&quot;,
+                   column(4, selectInput(&#39;xcol&#39;, &#39;X Variable&#39;, names(dataset))),
+                   column(4, selectInput(&#39;ycol&#39;, &#39;Y Variable&#39;, names(dataset),
+                                         selected=names(dataset)[[2]])),
+                   column(4, numericInput(&#39;clusters&#39;, &#39;Cluster count&#39;, 3,
+                                          min = 1, max = 9))
+          ),
+          fluidRow(
+            plotOutput(&#39;kmeans&#39;, height = &quot;400px&quot;)
+          )
 )</code></pre>
 </div>
 <div id="section-r-script-that-works-as-the-server-logic" class="section level2">
@@ -294,44 +288,37 @@ fluidPage(
 library(shiny)
 library(ggplot2)
 
-function(input, output) {
+function(input, output, session) {
   
-  dataset &lt;- reactive({
-    diamonds[sample(nrow(diamonds), input$sampleSize),]
+  # Combine the selected variables into a new data frame
+  selectedData &lt;- reactive({
+    dataset[, c(input$xcol, input$ycol)]
   })
   
-  output$plot &lt;- renderPlot({
-    
-    p &lt;- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
-    
-    if (input$color != &#39;None&#39;)
-      p &lt;- p + aes_string(color=input$color)
-    
-    facets &lt;- paste(input$facet_row, &#39;~&#39;, input$facet_col)
-    if (facets != &#39;. ~ .&#39;)
-      p &lt;- p + facet_grid(facets)
-    
-    if (input$jitter)
-      p &lt;- p + geom_jitter()
-    if (input$smooth)
-      p &lt;- p + geom_smooth()
-    
-    print(p)
-    
-  }, height=700)
+  clusters &lt;- reactive({
+    kmeans(selectedData(), input$clusters)
+  })
   
+  output$kmeans &lt;- renderPlot(height = 400, {
+    par(mar = c(5.1, 4.1, 0, 1))
+    plot(selectedData(),
+         col = clusters()$cluster,
+         pch = 20, cex = 3)
+    points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
+  })
 }</code></pre>
-<p>Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.</p>
-<pre class="r"><code>appName &lt;- &quot;Shinyapp_1&quot;
-appExists &lt;- tolower(appName) %in% rsconnect::applications()$name</code></pre>
-<pre class="r"><code>a &lt;- rsconnect::deployApp(&quot;Shinyapp_1/&quot;,appName = tolower(appName),launch.browser = FALSE)</code></pre>
-<pre class="r"><code>AppUrl &lt;- paste0(&quot;https://simontuk.shinyapps.io/&quot;,tolower(appName),&quot;/&quot;)</code></pre>
-</div>
-<div id="section-so-how-to-link-to-a-runnign-shiny-app-for-interactive-visualization" class="section level2">
-<h2>So how to link to a runnign shiny app for interactive visualization?</h2>
-<p>Here I will go through the steps to create a shiny app on shinyapps.io and link to it inside of you rmarkdown file.</p>
-<p>Steps to set up your shinyapps.io account with rsconnect: <a href="http://docs.rstudio.com/shinyapps.io/getting-started.html">shinapps.io</a></p>
-<pre class="r"><code>knitr::include_app(AppUrl, 
+<p>Simple call to open shiny webapp inside R terminal This does not work if you want to post an html independent of your local R-Session. To include a shiny app in your blog-post you need to publish the app to a r-server, as for example shinyapps.io. This is due to your github.io blog beign a static website without any server-side R running.</p>
+<pre class="r"><code>shiny::shinyAppDir(&quot;Shinyapp_1/&quot;)</code></pre>
+<p>To deploy an app to shinyapps.io you need the package rsconnect and an account.<br />
+Here I will go through the steps to create a shiny app on shinyapps.io and link to it inside of you rmarkdown file.<br />
+Steps to set up your shinyapps.io account with rsconnect: <a href="http://docs.rstudio.com/shinyapps.io/getting-started.html">shinapps.io</a> First you need to connect your local r session to shinyapps.io:</p>
+<pre class="r"><code>rsconnect::setAccountInfo(name=&#39;simontuk&#39;, token=&#39;&lt;TOKEN&gt;&#39;, secret=&#39;&lt;SECRET&gt;&#39;)</code></pre>
+<p>Then you can deploy the app with rsconnect:</p>
+<pre class="r"><code>rsconnect::deployApp(&quot;Shinyapp_1/&quot;,appName = tolower(appName),launch.browser = FALSE)</code></pre>
+<p>The apps are hosted on shinyapps.io in the format: <a href="https://" class="uri">https://</a>&lt;<your_username>&gt;.shinyapps.io/&lt;<appName>&gt;/ With the help of the <code>knitr::include_app()</code> Function you can embedd the app we just created into the html that will be posted as a static file on your blog. The app will still run on shinyapps.io, but the user can interact with the app without leaving your blog post.</p>
+<pre class="r"><code>AppUrl &lt;- paste0(&quot;https://simontuk.shinyapps.io/&quot;,tolower(appName),&quot;/&quot;)
+
+knitr::include_app(url = AppUrl,
   height = &quot;600px&quot;)</code></pre>
 <iframe src="https://simontuk.shinyapps.io/shinyapp_1/?showcase=0" width="672" height="600px">
 </iframe>
