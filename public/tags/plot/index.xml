@@ -81,8 +81,11 @@ function(input, output) {
   
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;appName &amp;lt;- &amp;quot;Shinyapp_1&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rsconnect::deployApp(&amp;quot;Shinyapp_1/&amp;quot;,appName = tolower(appName),launch.browser = FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;appName &amp;lt;- &amp;quot;Shinyapp_1&amp;quot;
+appExists &amp;lt;- tolower(appName) %in% rsconnect::applications()$name&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in as.POSIXlt.POSIXct(x, tz = tz): unknown timezone &amp;#39;default/
+## America/New_York&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;a &amp;lt;- rsconnect::deployApp(&amp;quot;Shinyapp_1/&amp;quot;,appName = tolower(appName),launch.browser = FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;AppUrl &amp;lt;- paste0(&amp;quot;https://simontuk.shinyapps.io/&amp;quot;,tolower(appName),&amp;quot;/&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;section-so-how-to-link-to-a-runnign-shiny-app-for-interactive-visualization&#34; class=&#34;section level2&#34;&gt;
