@@ -209,11 +209,8 @@
 
     <div class="article-style"><p>
       
-      How to write a .rmd so you will host a shiny application on your homepage in the end? Create the UI for the app. Link to Tutorial I’m following.
-UI to create an interactive histogram: saved as Shinyapp_1/ui.R</p>
-
-<h2 id="ui-r-library-shiny-library-ggplot2-dataset-lt-diamonds-fluidpage-titlepanel-quot-diamonds-explorer-quot-sidebarpanel-sliderinput-39-samplesize-39-39-sample-size-39-min-1-max-nrow-dataset-value-min-1000-nrow-dataset-step-500-round-0-selectinput-39-x-39-39-x-39-names-dataset-selectinput-39-y-39-39-y-39-names-dataset-names-dataset-2-selectinput-39-color-39-39-color-39-c-39-none-39-names-dataset-checkboxinput-39-jitter-39-39-jitter-39-checkboxinput-39-smooth-39-39-smooth-39-selectinput-39-facet-row-39-39-facet-row-39-c-none-39">ui.R library(shiny) library(ggplot2) dataset &lt;- diamonds fluidPage( titlePanel(&quot;Diamonds Explorer&quot;), sidebarPanel( sliderInput(&#39;sampleSize&#39;, &#39;Sample Size&#39;, min=1, max=nrow(dataset), value=min(1000, nrow(dataset)), step=500, round=0), selectInput(&#39;x&#39;, &#39;X&#39;, names(dataset)), selectInput(&#39;y&#39;, &#39;Y&#39;, names(dataset), names(dataset)[[2]]), selectInput(&#39;color&#39;, &#39;Color&#39;, c(&#39;None&#39;, names(dataset))), checkboxInput(&#39;jitter&#39;, &#39;Jitter&#39;), checkboxInput(&#39;smooth&#39;, &#39;Smooth&#39;), selectInput(&#39;facet_row&#39;, &#39;Facet Row&#39;, c(None=&#39;.</h2>
-
+      How to write a .rmd so you will host a shiny application on your homepage in the end? Link to Tutorial I’m following.
+This allows you to create a Shinyapp and include it in a blogpost or rendered html Output of any sort. Here I will show how to create an simple example App, how to deploy it to shinyapps.io and how to include it in the html output of your Rmarkdown file.
       
     </p></div>
   </div>
