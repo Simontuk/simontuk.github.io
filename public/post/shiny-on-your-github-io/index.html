@@ -250,9 +250,13 @@
     <div class="article-style" itemprop="articleBody">
       <div id="section-how-to-write-a-.rmd-so-you-will-host-a-shiny-application-on-your-homepage-in-the-end" class="section level1">
 <h1>How to write a .rmd so you will host a shiny application on your homepage in the end?</h1>
-<p>Create the UI for the app. Link to <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/">Tutorial</a> I’m following. ## UI to create an interactive histogram:<br />
-saved as <code>Shinyapp_1/ui.R</code></p>
-<pre class="r"><code>library(shiny)
+<p>Create the UI for the app. Link to <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/">Tutorial</a> I’m following.</p>
+<div id="section-ui-to-create-an-interactive-histogram" class="section level2">
+<h2>UI to create an interactive histogram:</h2>
+<p>saved as <code>Shinyapp_1/ui.R</code></p>
+<pre class="r"><code>## ui.R 
+
+library(shiny)
 library(ggplot2)
 
 dataset &lt;- diamonds
@@ -281,38 +285,41 @@ fluidPage(
     plotOutput(&#39;plot&#39;)
   )
 )</code></pre>
+</div>
 <div id="section-r-script-that-works-as-the-server-logic" class="section level2">
 <h2>R script that works as the server logic:</h2>
 <p>saved as <code>Shinyapp_1/server.R</code></p>
-<pre class="r"><code>library(shiny)
+<pre class="r"><code>## server.R
+
+library(shiny)
 library(ggplot2)
 
 function(input, output) {
-  
-  dataset &lt;- reactive({
-    diamonds[sample(nrow(diamonds), input$sampleSize),]
-  })
-  
-  output$plot &lt;- renderPlot({
     
-    p &lt;- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
+    dataset &lt;- reactive({
+        diamonds[sample(nrow(diamonds), input$sampleSize), ]
+    })
     
-    if (input$color != &#39;None&#39;)
-      p &lt;- p + aes_string(color=input$color)
+    output$plot &lt;- renderPlot({
+        
+        p &lt;- ggplot(dataset(), aes_string(x = input$x, y = input$y)) + geom_point()
+        
+        if (input$color != &quot;None&quot;) 
+            p &lt;- p + aes_string(color = input$color)
+        
+        facets &lt;- paste(input$facet_row, &quot;~&quot;, input$facet_col)
+        if (facets != &quot;. ~ .&quot;) 
+            p &lt;- p + facet_grid(facets)
+        
+        if (input$jitter) 
+            p &lt;- p + geom_jitter()
+        if (input$smooth) 
+            p &lt;- p + geom_smooth()
+        
+        print(p)
+        
+    }, height = 700)
     
-    facets &lt;- paste(input$facet_row, &#39;~&#39;, input$facet_col)
-    if (facets != &#39;. ~ .&#39;)
-      p &lt;- p + facet_grid(facets)
-    
-    if (input$jitter)
-      p &lt;- p + geom_jitter()
-    if (input$smooth)
-      p &lt;- p + geom_smooth()
-    
-    print(p)
-    
-  }, height=700)
-  
 }</code></pre>
 <p>Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.</p>
 <pre class="r"><code>appName &lt;- &quot;Shinyapp_1&quot;
@@ -329,10 +336,6 @@ appExists &lt;- tolower(appName) %in% rsconnect::applications()$name</code></pre
 <pre class="r"><code>knitr::include_app(AppUrl, 
   height = &quot;600px&quot;)</code></pre>
 <iframe src="https://simontuk.shinyapps.io/shinyapp_1/?showcase=0" width="672" height="600px">
-</iframe>
-<pre class="r"><code>knitr::include_app(&quot;https://yihui.shinyapps.io/miniUI/&quot;, 
-  height = &quot;600px&quot;)</code></pre>
-<iframe src="https://yihui.shinyapps.io/miniUI/?showcase=0" width="672" height="600px">
 </iframe>
 </div>
 </div>

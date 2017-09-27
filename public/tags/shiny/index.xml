@@ -17,9 +17,13 @@
       <guid>http://simontuk.github.io/post/shiny-on-your-github-io/</guid>
       <description>&lt;div id=&#34;section-how-to-write-a-.rmd-so-you-will-host-a-shiny-application-on-your-homepage-in-the-end&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;How to write a .rmd so you will host a shiny application on your homepage in the end?&lt;/h1&gt;
-&lt;p&gt;Create the UI for the app. Link to &lt;a href=&#34;https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/&#34;&gt;Tutorial&lt;/a&gt; I’m following. ## UI to create an interactive histogram:&lt;br /&gt;
-saved as &lt;code&gt;Shinyapp_1/ui.R&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(shiny)
+&lt;p&gt;Create the UI for the app. Link to &lt;a href=&#34;https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/&#34;&gt;Tutorial&lt;/a&gt; I’m following.&lt;/p&gt;
+&lt;div id=&#34;section-ui-to-create-an-interactive-histogram&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;UI to create an interactive histogram:&lt;/h2&gt;
+&lt;p&gt;saved as &lt;code&gt;Shinyapp_1/ui.R&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## ui.R 
+
+library(shiny)
 library(ggplot2)
 
 dataset &amp;lt;- diamonds
@@ -48,38 +52,41 @@ fluidPage(
     plotOutput(&amp;#39;plot&amp;#39;)
   )
 )&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;div id=&#34;section-r-script-that-works-as-the-server-logic&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;R script that works as the server logic:&lt;/h2&gt;
 &lt;p&gt;saved as &lt;code&gt;Shinyapp_1/server.R&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(shiny)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## server.R
+
+library(shiny)
 library(ggplot2)
 
 function(input, output) {
-  
-  dataset &amp;lt;- reactive({
-    diamonds[sample(nrow(diamonds), input$sampleSize),]
-  })
-  
-  output$plot &amp;lt;- renderPlot({
     
-    p &amp;lt;- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
+    dataset &amp;lt;- reactive({
+        diamonds[sample(nrow(diamonds), input$sampleSize), ]
+    })
     
-    if (input$color != &amp;#39;None&amp;#39;)
-      p &amp;lt;- p + aes_string(color=input$color)
+    output$plot &amp;lt;- renderPlot({
+        
+        p &amp;lt;- ggplot(dataset(), aes_string(x = input$x, y = input$y)) + geom_point()
+        
+        if (input$color != &amp;quot;None&amp;quot;) 
+            p &amp;lt;- p + aes_string(color = input$color)
+        
+        facets &amp;lt;- paste(input$facet_row, &amp;quot;~&amp;quot;, input$facet_col)
+        if (facets != &amp;quot;. ~ .&amp;quot;) 
+            p &amp;lt;- p + facet_grid(facets)
+        
+        if (input$jitter) 
+            p &amp;lt;- p + geom_jitter()
+        if (input$smooth) 
+            p &amp;lt;- p + geom_smooth()
+        
+        print(p)
+        
+    }, height = 700)
     
-    facets &amp;lt;- paste(input$facet_row, &amp;#39;~&amp;#39;, input$facet_col)
-    if (facets != &amp;#39;. ~ .&amp;#39;)
-      p &amp;lt;- p + facet_grid(facets)
-    
-    if (input$jitter)
-      p &amp;lt;- p + geom_jitter()
-    if (input$smooth)
-      p &amp;lt;- p + geom_smooth()
-    
-    print(p)
-    
-  }, height=700)
-  
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;appName &amp;lt;- &amp;quot;Shinyapp_1&amp;quot;
@@ -96,10 +103,6 @@ appExists &amp;lt;- tolower(appName) %in% rsconnect::applications()$name&lt;/cod
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::include_app(AppUrl, 
   height = &amp;quot;600px&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;iframe src=&#34;https://simontuk.shinyapps.io/shinyapp_1/?showcase=0&#34; width=&#34;672&#34; height=&#34;600px&#34;&gt;
-&lt;/iframe&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::include_app(&amp;quot;https://yihui.shinyapps.io/miniUI/&amp;quot;, 
-  height = &amp;quot;600px&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;iframe src=&#34;https://yihui.shinyapps.io/miniUI/?showcase=0&#34; width=&#34;672&#34; height=&#34;600px&#34;&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;/div&gt;
