@@ -1,31 +1,18 @@
 ## ui.R 
 
 library(shiny)
-library(ggplot2)
 
-dataset <- diamonds
+dataset <- iris
 
-fluidPage(
-  
-  titlePanel("Diamonds Explorer"),
-  
-  sidebarPanel(
-    
-    sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(dataset),
-                value=min(1000, nrow(dataset)), step=500, round=0),
-    
-    selectInput('x', 'X', names(dataset)),
-    selectInput('y', 'Y', names(dataset), names(dataset)[[2]]),
-    selectInput('color', 'Color', c('None', names(dataset))),
-    
-    checkboxInput('jitter', 'Jitter'),
-    checkboxInput('smooth', 'Smooth'),
-    
-    selectInput('facet_row', 'Facet Row', c(None='.', names(dataset))),
-    selectInput('facet_col', 'Facet Column', c(None='.', names(dataset)))
-  ),
-  
-  mainPanel(
-    plotOutput('plot')
-  )
+fluidPage(responsive = FALSE,
+          fluidRow(style = "padding-bottom: 20px;",
+                   column(4, selectInput('xcol', 'X Variable', names(dataset))),
+                   column(4, selectInput('ycol', 'Y Variable', names(dataset),
+                                         selected=names(dataset)[[2]])),
+                   column(4, numericInput('clusters', 'Cluster count', 3,
+                                          min = 1, max = 9))
+          ),
+          fluidRow(
+            plotOutput('kmeans', height = "400px")
+          )
 )
