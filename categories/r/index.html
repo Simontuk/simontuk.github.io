@@ -163,6 +163,16 @@
   
   
   <div>
+    <h2><a href="http://simontuk.github.io/post/shiny-on-your-github-io/">Shiny on your github.io</a></h2>
+    <div class="article-style">
+      
+      How to write a .rmd so you will host a shiny application on your homepage in the end? Create the UI for the app. Link to Tutorial I’m following. ## UI to create an interactive histogram:
+library(shiny) # Define UI for app that draws a histogram &mdash;- ui &lt;- fluidPage( # App title &mdash;- titlePanel(&quot;Hello Shiny!&quot;), # Sidebar layout with input and output definitions &mdash;- sidebarLayout( # Sidebar panel for inputs &mdash;- sidebarPanel( # Input: Slider for the number of bins &mdash;- sliderInput(inputId = &quot;bins&quot;, label = &quot;Number of bins:&quot;, min = 1, max = 50, value = 30) ), # Main panel for displaying outputs &mdash;- mainPanel( # Output: Histogram &mdash;- plotOutput(outputId = &quot;distPlot&quot;) ) ) ) R script that works as the server logic: # Define server logic required to draw a histogram &mdash;- server &lt;- function(input, output) { # Histogram of the Old Faithful Geyser Data &mdash;- # with requested number of bins # This expression that generates a histogram is wrapped in a call # to renderPlot to indicate that: # # 1.
+      
+    </div>
+  </div>
+  
+  <div>
     <h2><a href="http://simontuk.github.io/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></h2>
     <div class="article-style">
       

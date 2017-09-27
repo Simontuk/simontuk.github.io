@@ -6,8 +6,91 @@
     <description>Recent content in R on Simon Steiger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/r/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Shiny on your github.io</title>
+      <link>http://simontuk.github.io/post/shiny-on-your-github-io/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/post/shiny-on-your-github-io/</guid>
+      <description>&lt;div id=&#34;how-to-write-a-.rmd-so-you-will-host-a-shiny-application-on-your-homepage-in-the-end&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How to write a .rmd so you will host a shiny application on your homepage in the end?&lt;/h1&gt;
+&lt;p&gt;Create the UI for the app. Link to &lt;a href=&#34;https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/&#34;&gt;Tutorial&lt;/a&gt; I’m following. ## UI to create an interactive histogram:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(shiny)
+
+# Define UI for app that draws a histogram ----
+ui &amp;lt;- fluidPage(
+
+  # App title ----
+  titlePanel(&amp;quot;Hello Shiny!&amp;quot;),
+
+  # Sidebar layout with input and output definitions ----
+  sidebarLayout(
+
+    # Sidebar panel for inputs ----
+    sidebarPanel(
+
+      # Input: Slider for the number of bins ----
+      sliderInput(inputId = &amp;quot;bins&amp;quot;,
+                  label = &amp;quot;Number of bins:&amp;quot;,
+                  min = 1,
+                  max = 50,
+                  value = 30)
+
+    ),
+
+    # Main panel for displaying outputs ----
+    mainPanel(
+
+      # Output: Histogram ----
+      plotOutput(outputId = &amp;quot;distPlot&amp;quot;)
+
+    )
+  )
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;r-script-that-works-as-the-server-logic&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R script that works as the server logic:&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Define server logic required to draw a histogram ----
+server &amp;lt;- function(input, output) {
+
+  # Histogram of the Old Faithful Geyser Data ----
+  # with requested number of bins
+  # This expression that generates a histogram is wrapped in a call
+  # to renderPlot to indicate that:
+  #
+  # 1. It is &amp;quot;reactive&amp;quot; and therefore should be automatically
+  #    re-executed when inputs (input$bins) change
+  # 2. Its output type is a plot
+  output$distPlot &amp;lt;- renderPlot({
+
+    x    &amp;lt;- faithful$waiting
+    bins &amp;lt;- seq(min(x), max(x), length.out = input$bins + 1)
+
+    hist(x, breaks = bins, col = &amp;quot;#75AADB&amp;quot;, border = &amp;quot;white&amp;quot;,
+         xlab = &amp;quot;Waiting time to next eruption (in mins)&amp;quot;,
+         main = &amp;quot;Histogram of waiting times&amp;quot;)
+
+    })
+
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div style=&#34;width: 100% ; height: 500px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;&#34; class=&#34;muted well&#34;&gt;Shiny applications not supported in static R Markdown documents&lt;/div&gt; Simple call to open shiny webapp inside R terminal This does not work on your blogdown blog as it is a static website without any server-side R running.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;shinyApp(ui = ui, server = server)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;so-how-to-link-to-a-runnign-shiny-app-for-interactive-visualization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;So how to link to a runnign shiny app for interactive visualization?&lt;/h2&gt;
+&lt;p&gt;Here I will go through the steps to create a shiny app on shinyapps.io and link to it inside of you rmarkdown file.&lt;/p&gt;
+&lt;p&gt;Steps to set up your shinyapps.io account with rsconnect: &lt;a href=&#34;http://docs.rstudio.com/shinyapps.io/getting-started.html&#34;&gt;shinapps.io&lt;/a&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::include_app(&amp;quot;https://yihui.shinyapps.io/miniUI/&amp;quot;, 
+  height = &amp;quot;600px&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;iframe src=&#34;https://yihui.shinyapps.io/miniUI/?showcase=0&#34; width=&#34;672&#34; height=&#34;600px&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Hello R Markdown</title>
