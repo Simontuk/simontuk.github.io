@@ -5,6 +5,24 @@
     
     <url>
     
+      <loc>http://simontuk.github.io/project/development/</loc>
+      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://simontuk.github.io/project/single_cell/</loc>
+      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://simontuk.github.io/post/shiny-on-your-github-io/</loc>
       <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     </url>
@@ -59,24 +77,6 @@
     
     <url>
     
-      <loc>http://simontuk.github.io/project/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/project/example-external-project/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://simontuk.github.io/post/getting-started/</loc>
       <lastmod>2017-09-03T00:00:00-04:00</lastmod>
     </url>
@@ -113,15 +113,6 @@
     
     <url>
     
-      <loc>http://simontuk.github.io/publication/person-re-identification/</loc>
-      <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://simontuk.github.io/post/2015-07-23-r-rmarkdown/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     </url>
@@ -140,35 +131,6 @@
     
     <url>
     
-      <loc>http://simontuk.github.io/publication/clothing-search/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/publication_types/1/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/publication_types/2/</loc>
-      <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://simontuk.github.io/categories/</loc>
       <priority>0</priority>
     </url>
@@ -178,8 +140,8 @@
     
     <url>
     
-      <loc>http://simontuk.github.io/tags/deep-learning/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <loc>http://simontuk.github.io/tags/dna-accessibility/</loc>
+      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -188,8 +150,8 @@
     
     <url>
     
-      <loc>http://simontuk.github.io/tags/demo/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <loc>http://simontuk.github.io/tags/gene-expression/</loc>
+      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -229,7 +191,7 @@
     <url>
     
       <loc>http://simontuk.github.io/project/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -239,7 +201,6 @@
     <url>
     
       <loc>http://simontuk.github.io/publication_types/</loc>
-      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -300,6 +261,16 @@
     
       <loc>http://simontuk.github.io/</loc>
       <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://simontuk.github.io/tags/single-cell/</loc>
+      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
