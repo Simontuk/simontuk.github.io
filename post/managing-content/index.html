@@ -241,7 +241,7 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, and news/blog articles. After you have read this guide about creating and managing content, you may also be interested to learn about <a href="/post/writing-markdown-latex/" target="_blank">writing content with Markdown, LaTeX, and Shortcodes</a>.</p>
+      <p>This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about <a href="/post/writing-markdown-latex/" target="_blank">writing content with Markdown, LaTeX, and Shortcodes</a>.</p>
 
 <p>To enable LaTeX math rendering for a page, you should include <code>math = true</code> in the page&rsquo;s <code>+++</code> preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set <code>math = true</code> in <code>config.toml</code>.</p>
 
@@ -270,6 +270,7 @@ caption = &quot;Image credit: [**Academic**](https://github.com/gcushen/hugo-aca
 <li><a href="#create-a-blog-post">Create a blog post</a></li>
 <li><a href="#create-a-project">Create a project</a></li>
 <li><a href="#create-a-talk">Create a talk</a></li>
+<li><a href="#create-a-widget-page">Create a widget page</a></li>
 <li><a href="#create-other-pages-e-g-cv">Create other pages (e.g. CV)</a></li>
 <li><a href="#manage-node-index-pages">Manage node index pages</a></li>
 <li><a href="#removing-content">Removing content</a></li>
@@ -318,7 +319,7 @@ Further details on your publication can be written here using *Markdown* for for
     url = &quot;http://www.example.org&quot;
 </code></pre>
 
-<p>If you enabled <code>detailed_list</code> for publications in <code>config.toml</code>, then there are a few more optional variables that you can include in the publication page preamble. You may use <code>abstract_short = &quot;friendly summary of abstract&quot;</code> and <code>publication_short = &quot;abbreviated publication details&quot;</code> to display a friendly summary of the abstract and abbreviate the publication details, respectively. Furthermore, there is the option to display a different image on the homepage to the publication detail page by setting <code>image_preview = &quot;my-image.jpg&quot;</code>. This can be useful if you wish to scale down the image for the homepage or simply if you just wish to show a different image for the preview.</p>
+<p>If you set <code>list_format=2</code> to enable a detailed listing of publications in the Publication Widget (<code>home/publications.md</code>) or Publication Archive (<code>publication/_index.md</code>), then there are a few more optional variables that you can include in the publication page preamble. You may use <code>abstract_short = &quot;friendly summary of abstract&quot;</code> and <code>publication_short = &quot;abbreviated publication details&quot;</code> to display a friendly summary of the abstract and abbreviate the publication details, respectively. Furthermore, there is the option to display a different image on the homepage to the publication detail page by setting <code>image_preview = &quot;my-image.jpg&quot;</code>. This can be useful if you wish to scale down the image for the homepage or simply if you just wish to show a different image for the preview.</p>
 
 <div class="alert alert-warning">
   <p>Any double quotes (<code>&quot;</code>) or backslashes (e.g. LaTeX <code>\times</code>) occurring within the value of any frontmatter parameter (such as the <em>abstract</em>) should be escaped with a backslash (<code>\</code>). For example, the symbol <code>&quot;</code> and LaTeX text <code>\times</code> become <code>\&quot;</code> and <code>\\times</code>, respectively. Refer to the <a href="https://github.com/toml-lang/toml#user-content-string" target="_blank">TOML documentation</a> for more info.</p>
@@ -359,6 +360,23 @@ Further details on your publication can be written here using *Markdown* for for
 </code></pre>
 
 <p>Then edit the newly created file <code>content/talk/my-talk-name.md</code> with your full talk title and details. Note that many of the talk parameters are similar to the publication parameters.</p>
+
+<h2 id="create-a-widget-page">Create a widget page</h2>
+
+<p>So you would like to create a page which utilizes Academic&rsquo;s widget system, similar to the homepage?</p>
+
+<p>Create a new folder in your <code>content</code> folder, naming it with your new page name. In this example, we will create a <em>courses</em> page by creating a <code>content/courses/</code> folder.</p>
+
+<p>Within your new <code>content/courses/</code> folder, create a file named <code>_index.md</code> containing the following parameters:</p>
+
+<pre><code>+++
+title = &quot;Courses&quot;
+date = 2017-01-01
+widgets = true
++++
+</code></pre>
+
+<p>Install widgets into your <code>content/courses/</code> folder. To achieve this, widgets can be copied from your <code>content/home/</code> folder or downloaded from <a href="https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/home" target="_blank">Github</a>.</p>
 
 <h2 id="create-other-pages-e-g-cv">Create other pages (e.g. CV)</h2>
 
