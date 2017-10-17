@@ -264,7 +264,6 @@
 <li><a href="#option-highlight">Option <code>highlight</code></a></li>
 <li><a href="#option-highlight-languages">Option <code>highlight_languages</code></a></li>
 <li><a href="#option-highlight-style">Option <code>highlight_style</code></a></li>
-<li><a href="#option-highlight-version">Option <code>highlight_version</code></a></li>
 </ul></li>
 </ul></li>
 <li><a href="#twitter-tweet">Twitter tweet</a></li>
@@ -272,7 +271,11 @@
 <li><a href="#vimeo">Vimeo</a></li>
 <li><a href="#github-gist">GitHub gist</a></li>
 <li><a href="#speaker-deck">Speaker Deck</a></li>
-<li><a href="#rm-latex-math">$\rm \LaTeX$ math</a></li>
+<li><a href="#rm-latex-math">$\rm \LaTeX$ math</a>
+<ul>
+<li><a href="#multiline-equations">Multiline equations</a></li>
+<li><a href="#publication-abstracts">Publication abstracts</a></li>
+</ul></li>
 <li><a href="#table">Table</a></li>
 <li><a href="#alerts">Alerts</a></li>
 <li><a href="#table-of-contents">Table of Contents</a></li>
@@ -338,8 +341,10 @@ Strikethrough with ~~two tildes~~.
 
 <p>To enable linking to a file, such as a PDF, first place the file in your <code>static/files/</code> folder and then link to it using the following form:</p>
 
-<pre><code>{{% staticref &quot;files/cv.pdf&quot; %}}Download my CV{{% /staticref %}}
+<pre><code>{{% staticref &quot;files/cv.pdf&quot; &quot;newtab&quot; %}}Download my CV{{% /staticref %}}
 </code></pre>
+
+<p>The optional <code>&quot;newtab&quot;</code> argument for <code>staticref</code> will cause the link to be opened in a new tab.</p>
 
 <h2 id="emojis">Emojis</h2>
 
@@ -427,14 +432,6 @@ print(&quot;You entered: {}&quot;.format(input_string_var))
 <td>yes</td>
 <td>no</td>
 </tr>
-
-<tr>
-<td><code>highlight_version</code></td>
-<td>string</td>
-<td>choose the highlight.js version</td>
-<td>yes</td>
-<td>no</td>
-</tr>
 </tbody>
 </table>
 
@@ -512,10 +509,6 @@ print(&quot;You entered: {}&quot;.format(input_string_var))
 
 <p>The <code>highlight_style</code> option is only recognized when set in <code>config.toml</code>. Setting <code>highlight_style</code> in your page&rsquo;s preamble has no effect.</p>
 
-<h4 id="option-highlight-version">Option <code>highlight_version</code></h4>
-
-<p>The <code>highlight_version</code> option, as the name implies, allows you to select the version of highlight.js you want to use. The default value is &ldquo;9.9.0&rdquo;. The <code>highlight_version</code> option is only recognized when set in <code>config.toml</code>. Setting <code>highlight_version</code> in your page&rsquo;s preamble has no effect.</p>
-
 <h2 id="twitter-tweet">Twitter tweet</h2>
 
 <p>To include a single tweet, pass the tweet’s ID from the tweet&rsquo;s URL as parameter to the shortcode:</p>
@@ -556,6 +549,30 @@ print(&quot;You entered: {}&quot;.format(input_string_var))
 </code></pre>
 
 <p>This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$</p>
+
+<p>Note that Markdown special characters need to be escaped with a backslash so they are treated as math rather than Markdown. For example, <code>*</code> and <code>_</code> become <code>\*</code> and <code>\_</code> respectively.</p>
+
+<h3 id="multiline-equations">Multiline equations</h3>
+
+<p>The standard LaTeX line break consisting of 2 backslashes needs to be replaced with 6 backslashes:</p>
+
+<pre><code class="language-TeX">$$f(k;p\_0^\*) = \begin{cases} p\_0^\* &amp; \text{if }k=1, \\\\\\
+1-p\_0^\* &amp; \text {if }k=0.\end{cases}$$
+</code></pre>
+
+<p>$$f(k;p_0^*) = \begin{cases} p_0^* &amp; \text{if }k=1, \\<br />
+1-p_0^* &amp; \text {if }k=0.\end{cases}$$</p>
+
+<h3 id="publication-abstracts">Publication abstracts</h3>
+
+<p>As Hugo and Academic attempt to parse TOML, Markdown, and LaTeX content in the abstract, the following guidelines should be followed just for the publication <code>abstract</code> and <code>abstract_short</code> fields:</p>
+
+<ul>
+<li>escape each LaTeX backslash (<code>\</code>) with an extra backslash, yielding <code>\\</code></li>
+<li>escape each LaTeX underscore (<code>_</code>) with two backslashes, yielding <code>\\_</code></li>
+</ul>
+
+<p>Hence, <code>abstract = &quot;${O(d_{\max})}$&quot;</code> becomes <code>abstract = &quot;${O(d\\_{\\max})}$&quot;</code>.</p>
 
 <h2 id="table">Table</h2>
 
