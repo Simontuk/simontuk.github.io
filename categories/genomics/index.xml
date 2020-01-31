@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Genomics | Simon Steiger</title>
+    <link>/categories/genomics/</link>
+      <atom:link href="/categories/genomics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Genomics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 31 Jan 2020 16:06:00 +0100</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Genomics</title>
+      <link>/categories/genomics/</link>
+    </image>
+    
+    <item>
+      <title>Single Cell Genomics</title>
+      <link>/project/single-cell-genomics/</link>
+      <pubDate>Fri, 31 Jan 2020 16:06:00 +0100</pubDate>
+      <guid>/project/single-cell-genomics/</guid>
+      <description>&lt;p&gt;Resolving transcriptomes and other -omics datasets at the single cell level opened various new possibilites in the Analysis of disease and biology.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

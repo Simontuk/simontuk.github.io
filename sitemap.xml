@@ -1,288 +1,186 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/project/development/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/project/ecommerce-with-jtl-and-shopware/</loc>
+    <lastmod>2020-01-31T16:10:12+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/project/single_cell/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2020-01-31T16:10:12+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/post/shiny-on-your-github-io/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-01-31T16:10:12+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/post/</loc>
-      <lastmod>2017-01-01T00:00:00-05:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/project/cellular-interaction-modelling/</loc>
+    <lastmod>2020-01-31T16:09:29+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/academic/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-01-31T16:06:00+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/talk/example-talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/categories/genomics/</loc>
+    <lastmod>2020-01-31T16:06:00+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/publication/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/project/single-cell-genomics/</loc>
+    <lastmod>2020-01-31T16:06:00+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/talk/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/privacy/</loc>
+    <lastmod>2020-01-31T00:00:00+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/post/getting-started/</loc>
-      <lastmod>2017-09-03T00:00:00-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/steiger-simon/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/post/widgets/</loc>
-      <lastmod>2016-04-19T00:00:00-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication_types/2/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/post/managing-content/</loc>
-      <lastmod>2016-04-18T00:00:00-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/amrhein-lisa/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-17T00:00:00-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/post/2015-07-23-r-rmarkdown/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/ball-claudia-r./</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/post/migrate-from-jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00-04:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/conrad-christian/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/eils-roland/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/dna-accessibility/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/eismann-bjorn/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/gene-expression/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/fuchs-christiane/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/hugo/</loc>
-      <lastmod>2017-09-03T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/glimm-hanno/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00-04:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/gu-zuguang/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/plot/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/gut-ivo-g./</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/project/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/gut-marta/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/publication_types/</loc>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/krieger-teresa/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/categories/r/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/mallm-jan-philipp/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/r-markdown/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/park-jeongbin/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/regression/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/publication/pheno-seqlinking-visual-features-and-gene-expression-in-3d-cell-culture-systems/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/categories/shiny/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/preu%C3%9Fer-friedrich/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/shiny/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/single-cell/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/rippe-karsten/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>http://simontuk.github.io/tags/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>/authors/schlesner-matthias/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/theis-fabian/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/tirier-stephan-m/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/waschow-marcel/</loc>
+    <lastmod>2019-08-26T15:39:23+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/admin/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+  </url>
+  
+  <url>
+    <loc>/talk/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
   
 </urlset>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Simon Steiger</title>
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2019 15:39:23 +0100</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Authors</title>
+      <link>/authors/</link>
+    </image>
+    
+    <item>
+      <title>**Steiger, Simon**</title>
+      <link>/authors/steiger-simon/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/steiger-simon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Amrhein, Lisa</title>
+      <link>/authors/amrhein-lisa/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/amrhein-lisa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ball, Claudia R.</title>
+      <link>/authors/ball-claudia-r./</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/ball-claudia-r./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conrad, Christian</title>
+      <link>/authors/conrad-christian/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/conrad-christian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eils, Roland</title>
+      <link>/authors/eils-roland/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/eils-roland/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eismann, Björn</title>
+      <link>/authors/eismann-bjorn/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/eismann-bjorn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fuchs, Christiane</title>
+      <link>/authors/fuchs-christiane/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/fuchs-christiane/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Glimm, Hanno</title>
+      <link>/authors/glimm-hanno/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/glimm-hanno/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gu, Zuguang</title>
+      <link>/authors/gu-zuguang/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/gu-zuguang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gut, Ivo G.</title>
+      <link>/authors/gut-ivo-g./</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/gut-ivo-g./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gut, Marta</title>
+      <link>/authors/gut-marta/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/gut-marta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Krieger, Teresa</title>
+      <link>/authors/krieger-teresa/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/krieger-teresa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mallm, Jan-Philipp</title>
+      <link>/authors/mallm-jan-philipp/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/mallm-jan-philipp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Park, Jeongbin</title>
+      <link>/authors/park-jeongbin/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/park-jeongbin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Preußer, Friedrich</title>
+      <link>/authors/preu%C3%9Fer-friedrich/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/preu%C3%9Fer-friedrich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rippe, Karsten</title>
+      <link>/authors/rippe-karsten/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/rippe-karsten/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Schlesner, Matthias</title>
+      <link>/authors/schlesner-matthias/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/schlesner-matthias/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theis, Fabian</title>
+      <link>/authors/theis-fabian/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/theis-fabian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tirier, Stephan M</title>
+      <link>/authors/tirier-stephan-m/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/tirier-stephan-m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Waschow, Marcel</title>
+      <link>/authors/waschow-marcel/</link>
+      <pubDate>Mon, 26 Aug 2019 15:39:23 +0100</pubDate>
+      <guid>/authors/waschow-marcel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;My research interest centers around the application and development of tools for the analysis of sequencing data. A special emphasis of my work is in genomics and the work with single-cell sequencing data.
+I try to create insight from data, uncovering underlying mechanisms not just in life sciences, but also in shoe business and in IT management.&lt;/p&gt;
+&lt;p&gt;I thrive collaborating in interdisciplinary labs, trying to understand the needs and differences of computational and wet-lab biology.&lt;/p&gt;
+&lt;p&gt;For my master thesis I&#39;m working with Stephan Tirier on using Single Cell RNAseq data to understand different molecular aspects of Multiple Myeloma. We aim to unravel cellular interactions between Multiple Myeloma cells and the microenvironment. Additionally we want to map cellular states of Myeloma cells to a developmental B-cell stage of healthy cells derived from the Human Cell Atlas. For this project I am working at the lab of Prof. Karsten Rippe at the bioquant in Heidelberg.
+&lt;a href=&#34;https://malone.bioquant.uni-heidelberg.de/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chromatin Networks&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
