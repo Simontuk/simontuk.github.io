@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Simon Steiger</title>
@@ -6,8 +6,56 @@
     <description>Recent content in Tags on Simon Steiger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2017 Simon Steiger</copyright>
+    <lastBuildDate>Tue, 17 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://simontuk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DNA-accessibility</title>
+      <link>http://simontuk.github.io/tags/dna-accessibility/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/tags/dna-accessibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gene-expression</title>
+      <link>http://simontuk.github.io/tags/gene-expression/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/tags/gene-expression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>single-cell</title>
+      <link>http://simontuk.github.io/tags/single-cell/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/tags/single-cell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plot</title>
+      <link>http://simontuk.github.io/tags/plot/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shiny</title>
+      <link>http://simontuk.github.io/tags/shiny/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/tags/shiny/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
@@ -15,12 +63,11 @@
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://simontuk.github.io/tags/academic/</guid>
-      <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
-</description>
+      <description>Here is a list of all the content that has been tagged as academic.</description>
     </item>
     
     <item>
-      <title>Deep Learning</title>
+      <title>deep-learning</title>
       <link>http://simontuk.github.io/tags/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
@@ -29,7 +76,7 @@
     </item>
     
     <item>
-      <title>Demo</title>
+      <title>demo</title>
       <link>http://simontuk.github.io/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
@@ -38,29 +85,11 @@
     </item>
     
     <item>
-      <title>Hugo</title>
+      <title>hugo</title>
       <link>http://simontuk.github.io/tags/hugo/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>http://simontuk.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jekyll</title>
-      <link>http://simontuk.github.io/tags/jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 -0400</pubDate>
-      
-      <guid>http://simontuk.github.io/tags/jekyll/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plot</title>
-      <link>http://simontuk.github.io/tags/plot/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://simontuk.github.io/tags/plot/</guid>
       <description></description>
     </item>
     
@@ -74,7 +103,7 @@
     </item>
     
     <item>
-      <title>Regression</title>
+      <title>regression</title>
       <link>http://simontuk.github.io/tags/regression/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
@@ -83,11 +112,11 @@
     </item>
     
     <item>
-      <title>Shiny</title>
-      <link>http://simontuk.github.io/tags/shiny/</link>
-      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      <title>jekyll</title>
+      <link>http://simontuk.github.io/tags/jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0100</pubDate>
       
-      <guid>http://simontuk.github.io/tags/shiny/</guid>
+      <guid>http://simontuk.github.io/tags/jekyll/</guid>
       <description></description>
     </item>
     

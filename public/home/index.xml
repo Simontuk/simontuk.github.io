@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Simon Steiger</title>
@@ -6,8 +6,161 @@
     <description>Recent content in Homes on Simon Steiger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2017 Simon Steiger</copyright>
+    <lastBuildDate>Sat, 23 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://simontuk.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://simontuk.github.io/home/about-2/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/about-2/</guid>
+      <description>This site is currently under construction Powered by Hugo and blogdown Biography Simon Steiger is a student of molecular biotechnology at the Insitute for Pharmacy and Molecular Biotechnology IPMB at University Heidelberg. His specialization is in bioinformatics with an special emphasis on genomics and the work with single cell sequencing data. He is currently pursuing a master degree.
+For his bachelor thesis he worked in the Computational Oncology lab supervised by Carl Herrmann and Naveed Ishaque at the eilslabs.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://simontuk.github.io/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/about/</guid>
+      <description>Biography I am currently pursuing a masters degree in molecular biotechnology at the Insitute for Pharmacy and Molecular Biotechnology IPMB at University Heidelberg. My current research centers around the application and development of tools for the analysis of sequencing data. An special emphasis of my recent work was in genomics and the work with single cell sequencing data.
+I thrive collaborating in interdisciplinary labs, trying to understand the needs and differences of computational and wet-lab biology.</description>
+    </item>
+    
+    <item>
+      <title>Internships</title>
+      <link>http://simontuk.github.io/home/internships-2/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/internships-2/</guid>
+      <description>Current and former Projects With Peter Kharchenko at Harvard Medical School he works on the analysis of signaling ligands and receptor-relationships in single cell RNA-seq data and worked on Pagoda 2, a pipeline for the analysis of single cell data.
+James Reddington at Eileen Furlong Lab at EMBL mentored him in his project that involved the analysis of priming of enhancers with DNase-hypersensitivity sequencing data of drosophila embryos.
+Supervised by Stephan Tirier at the lab of Christian Conrad he applied single cell genomics on a cancer cellline and helped linking transcriptional signatures with phenotypical features of cells.</description>
+    </item>
+    
+    <item>
+      <title>Internships</title>
+      <link>http://simontuk.github.io/home/internships/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/internships/</guid>
+      <description>Department of Biomedical Informatics - Harvard Medical School 04.2017 to 10.2017
+With Peter Kharchenko at the DBMI at Harvard Medical School I worked on the analysis of signaling in single cell transcriptional Data. I used the relations of ligands and receptors in single cell RNA-seq data to infer singaling between cells and the effect of co-expression of ligands and receptors. Additionally I worked on Pagoda 2, a pipeline and interactive tool for the analysis of single cell data.</description>
+    </item>
+    
+    <item>
+      <title>Further Work and Research Experiences</title>
+      <link>http://simontuk.github.io/home/experience/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/experience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Extracuricculars and Awards</title>
+      <link>http://simontuk.github.io/home/extracurriculars/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/extracurriculars/</guid>
+      <description>Besides becoming a researcher I have always been passionate about collectively making a difference. This got me involved in the democratic representation of students at my university. The students council had just been established in 2013, so I joined the efforts in building and shaping it from the beginning of my studies at University Heidelberg. Select of my contributions:
+ 11.2014 - 04.2017 Chairman of the students council at the University Heidelberg 08.</description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>http://simontuk.github.io/home/publications_selected-2/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://simontuk.github.io/home/publications_selected-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>http://simontuk.github.io/home/publications-2/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://simontuk.github.io/home/publications-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>http://simontuk.github.io/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>http://simontuk.github.io/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://simontuk.github.io/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>http://simontuk.github.io/home/posts-2/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/posts-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://simontuk.github.io/home/projects-2/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/projects-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://simontuk.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>http://simontuk.github.io/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://simontuk.github.io/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>http://simontuk.github.io/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
+      
+      <guid>http://simontuk.github.io/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://simontuk.github.io/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/home/contact/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

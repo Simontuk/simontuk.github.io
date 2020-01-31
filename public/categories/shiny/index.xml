@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shiny on Simon Steiger</title>
@@ -6,8 +6,11 @@
     <description>Recent content in Shiny on Simon Steiger</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; 2017 Simon Steiger</copyright>
     <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/shiny/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://simontuk.github.io/categories/shiny/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Shiny on your github.io</title>
@@ -15,85 +18,9 @@
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://simontuk.github.io/post/shiny-on-your-github-io/</guid>
-      <description>&lt;div id=&#34;section-how-to-blog-with-an-embedded-shiny-application&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;How to blog with an embedded shiny application&lt;/h1&gt;
-&lt;p&gt;The challenge to have a embedded shiny-applications is, that it needs to run on a public R-Server.&lt;/p&gt;
-&lt;p&gt;Link to &lt;a href=&#34;https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/&#34;&gt;Tutorial&lt;/a&gt; I’m following.&lt;/p&gt;
-&lt;p&gt;This allows you to create a Shinyapp and include it in a blogpost or rendered html Output of any sort. Here I will show how to create an simple example App, how to deploy it to shinyapps.io and how to include it in the html output of your Rmarkdown file.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;section-code-to-create-a-shiny-app&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Code to create a shiny app:&lt;/h1&gt;
-&lt;p&gt;Two files are needed to create a shiny app. &lt;code&gt;ui.R&lt;/code&gt; and &lt;code&gt;server.R&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The app will be created in the folder where your Rmarkdown is rendered. The name of the folder could be the name of the App you want to create:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;appName &amp;lt;- &amp;quot;Shinyapp_1&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;section-ui-to-create-an-interactive-histogram&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;UI to create an interactive histogram:&lt;/h2&gt;
-&lt;p&gt;saved as &lt;code&gt;Shinyapp_1/ui.R&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## ui.R 
-
-library(shiny)
-library(datasets)
-
-dataset &amp;lt;- datasets::iris
-
-fluidPage(fluidRow(style = &amp;quot;padding-bottom: 20px;&amp;quot;,
-                   column(4, selectInput(&amp;#39;xcol&amp;#39;, &amp;#39;X Variable&amp;#39;, names(dataset))),
-                   column(4, selectInput(&amp;#39;ycol&amp;#39;, &amp;#39;Y Variable&amp;#39;, names(dataset),
-                                         selected=names(dataset)[[2]])),
-                   column(4, numericInput(&amp;#39;clusters&amp;#39;, &amp;#39;Cluster count&amp;#39;, 3,
-                                          min = 1, max = 9))
-          ),
-          fluidRow(
-            plotOutput(&amp;#39;kmeans&amp;#39;, height = &amp;quot;400px&amp;quot;)
-          )
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;section-r-script-that-works-as-the-server-logic&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;R script that works as the server logic:&lt;/h2&gt;
-&lt;p&gt;saved as &lt;code&gt;Shinyapp_1/server.R&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## server.R
-
-library(shiny)
-
-dataset &amp;lt;- datasets::iris
-
-function(input, output) {
-  
-  # Combine the selected variables into a new data frame
-  selectedData &amp;lt;- reactive({
-    dataset[, c(input$xcol, input$ycol)]
-  })
-  
-  clusters &amp;lt;- reactive({
-    kmeans(selectedData(), input$clusters)
-  })
-  
-  output$kmeans &amp;lt;- renderPlot(height = 400, {
-    par(mar = c(5.1, 4.1, 0, 1))
-    plot(selectedData(),
-         col = clusters()$cluster,
-         pch = 20, cex = 3)
-    points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
-  })
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Simple call to open shiny webapp inside R terminal This does not work if you want to post an html independent of your local R-Session. To include a shiny app in your blog-post you need to publish the app to a r-server, as for example shinyapps.io. This is due to your github.io blog beign a static website without any server-side R running.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;shiny::shinyAppDir(&amp;quot;Shinyapp_1/&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To deploy an app to shinyapps.io you need the package rsconnect and an account.&lt;br /&gt;
-Here I will go through the steps to create a shiny app on shinyapps.io and link to it inside of you rmarkdown file.&lt;br /&gt;
-Steps to set up your shinyapps.io account with rsconnect: &lt;a href=&#34;http://docs.rstudio.com/shinyapps.io/getting-started.html&#34;&gt;shinapps.io&lt;/a&gt; First you need to connect your local r session to shinyapps.io:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rsconnect::setAccountInfo(name=&amp;#39;simontuk&amp;#39;, token=&amp;#39;&amp;lt;TOKEN&amp;gt;&amp;#39;, secret=&amp;#39;&amp;lt;SECRET&amp;gt;&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then you can deploy the app with rsconnect:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rsconnect::deployApp(&amp;quot;Shinyapp_1/&amp;quot;,appName = tolower(appName),launch.browser = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The apps are hosted on shinyapps.io in the format: &lt;a href=&#34;https://&#34; class=&#34;uri&#34;&gt;https://&lt;/a&gt;&amp;lt;&lt;your_username&gt;&amp;gt;.shinyapps.io/&amp;lt;&lt;appName&gt;&amp;gt;/ With the help of the &lt;code&gt;knitr::include_app()&lt;/code&gt; Function you can embedd the app we just created into the html that will be posted as a static file on your blog. The app will still run on shinyapps.io, but the user can interact with the app without leaving your blog post.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;AppUrl &amp;lt;- paste0(&amp;quot;https://simontuk.shinyapps.io/&amp;quot;,tolower(appName),&amp;quot;/&amp;quot;)
-
-knitr::include_app(url = AppUrl,
-  height = &amp;quot;600px&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;iframe src=&#34;https://simontuk.shinyapps.io/shinyapp_1/?showcase=0&#34; width=&#34;672&#34; height=&#34;600px&#34;&gt;
-&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <description>How to blog with an embedded shiny application The challenge to have a embedded shiny-applications is, that it needs to run on a public R-Server.
+Link to Tutorial I’m following.
+This allows you to create a Shinyapp and include it in a blogpost or rendered html Output of any sort. Here I will show how to create an simple example App, how to deploy it to shinyapps.io and how to include it in the html output of your Rmarkdown file.</description>
     </item>
     
   </channel>

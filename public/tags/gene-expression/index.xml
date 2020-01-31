@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gene-expression on Simon Steiger</title>
+    <link>http://simontuk.github.io/tags/gene-expression/</link>
+    <description>Recent content in gene-expression on Simon Steiger</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Simon Steiger</copyright>
+    <lastBuildDate>Tue, 17 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://simontuk.github.io/tags/gene-expression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Priming of enhancers</title>
+      <link>http://simontuk.github.io/project/development/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/project/development/</guid>
+      <description>Understanding the interplay of DNA accessibility and expression</description>
+    </item>
+    
+    <item>
+      <title>Single Cell Genomics</title>
+      <link>http://simontuk.github.io/project/single_cell/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://simontuk.github.io/project/single_cell/</guid>
+      <description>Dissecting heterogeneity in Single Cell RNAseq-data</description>
+    </item>
+    
+  </channel>
+</rss>
