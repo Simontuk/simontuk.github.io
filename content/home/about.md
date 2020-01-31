@@ -20,9 +20,9 @@ weight = 1
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "M.Sc. in Molecular Biotechnology"
+  course = "working towards a M.Sc. in Molecular Biotechnology"
   institution = "University Heidelberg"
-  year = 2018
+  year = "expected 2018"
 
 [[education.courses]]
   course = "B.Sc. in Molecular Biotechnology"
@@ -31,13 +31,13 @@ weight = 1
 
 +++
 
-### This site is currently under construction
-### Powered by [Hugo][1] and [blogdown][2]
 
 # Biography
 
-Simon Steiger is a student of molecular biotechnology at the Insitute for Pharmacy and Molecular Biotechnology [*IPMB*](http://www.ipmb.uni-heidelberg.de/) at University Heidelberg. His specialization is in bioinformatics with an special emphasis on genomics and the work with single cell sequencing data. He is currently pursuing a master degree.  
-For his bachelor thesis he worked in the Computational Oncology lab supervised by Carl Herrmann and Naveed Ishaque at the [eilslabs][3]. 
+I am currently pursuing a masters degree in molecular biotechnology at the Insitute for Pharmacy and Molecular Biotechnology [*IPMB*](http://www.ipmb.uni-heidelberg.de/) at University Heidelberg. My current research centers around the application and development of tools for the analysis of sequencing data. An special emphasis of my recent work was in genomics and the work with single cell sequencing data.  
+I thrive collaborating in interdisciplinary labs, trying to understand the needs and differences of computational and wet-lab biology. 
+For my bachelor thesis I worked in the Computational Oncology lab supervised by Carl Herrmann and Naveed Ishaque at the [eilslabs][3]. 
+
 
 [1]:	https://gohugo.io/
 [2]:	https://github.com/rstudio/blogdown

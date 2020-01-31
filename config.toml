@@ -3,6 +3,7 @@ baseURL = "http://simontuk.github.io/"
 languageCode = "en-us"
 title = "Simon Steiger"
 enableEmoji = true
+copyright = "&copy; 2017 Simon Steiger"
 
 footnotereturnlinkcontents = "<sup>^</sup>"
 math = true
@@ -18,10 +19,25 @@ googleAnalytics = "UA-57035854-2"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+[outputs]
+  home = [ "HTML", "CSS" ]
+
+# Configure BlackFriday Markdown rendering.
+#   See: https://gohugo.io/readfiles/bfconfig/
 [blackfriday]
-  hrefTargetBlank = true
+  hrefTargetBlank = true  # `true` opens external links in a new tab.
+  fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
+  smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
 
 [params]
+  # Color theme.
+  #   Choose from `default`, `ocean`, `forest`, or `coffee`.
+  color_theme = "ocean"
+
+  # Font style.
+  #   Choose from `default`, `classic`, or `playfair`.
+  font = "default"
+  # Your Details
   name = "Simon Steiger"
   role = "cand. mol. biotech."
   organization = "University Heidelberg"
@@ -38,6 +54,16 @@ defaultContentLanguageInSubdir = false
   # Enable Keybase in Contact section by entering your keybase.io username.
   keybase = "simontuk"
 
+  # Diplay a logo in navigation bar rather than title (optional).
+  #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
+  logo = ""
+  
+  # Display comment count? Requires commenting to be enabled.
+  comment_count = true
+
+  # Display section pager for posts?
+  section_pager = false
+  
   # Date format (refer to Go's date format: http://flippinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
   date_format = "2. Jan 2006"

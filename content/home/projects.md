@@ -30,12 +30,16 @@ filter_default = 0
   tag = "*"
   
 [[filter]]
-  name = "Deep Learning"
-  tag = ".deep-learning"
+  name = "Single Cell"
+  tag = ".single-cell"
+
+[[filter]]
+  name = "Gene Expression"
+  tag = ".gene-expression"
 
 [[filter]]
   name = "Other"
-  tag = ".demo"
+  tag = ".other"
 
 +++
 

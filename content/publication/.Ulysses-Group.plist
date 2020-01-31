@@ -4,15 +4,24 @@
 <dict>
 	<key>resolutionData</key>
 	<dict>
+		<key>sheetClusters</key>
+		<dict/>
 		<key>sheetOrder</key>
 		<real>527924992.73556203</real>
 	</dict>
+	<key>sheetClusters</key>
+	<array/>
 	<key>sheetOrder</key>
 	<string>modificationDate</string>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
 	<key>versioning</key>
 	<dict>
+		<key>sheetClusters</key>
+		<dict>
+			<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+			<integer>1</integer>
+		</dict>
 		<key>sheetOrder</key>
 		<dict>
 			<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>

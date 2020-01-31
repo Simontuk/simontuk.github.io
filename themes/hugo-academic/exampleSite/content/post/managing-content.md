@@ -6,7 +6,7 @@ title = "Managing content"
 math = false
 +++
 
-This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, and news/blog articles. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< ref "post/writing-markdown-latex.md" >}}).<!--more-->
+This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< ref "post/writing-markdown-latex.md" >}}).<!--more-->
 
 To enable LaTeX math rendering for a page, you should include `math = true` in the page's `+++` preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `config.toml`.
 
@@ -66,7 +66,7 @@ You can also associate custom link buttons with the publication by adding the fo
     url = "http://www.example.org"
 ```
 
-If you enabled `detailed_list` for publications in `config.toml`, then there are a few more optional variables that you can include in the publication page preamble. You may use `abstract_short = "friendly summary of abstract"` and `publication_short = "abbreviated publication details"` to display a friendly summary of the abstract and abbreviate the publication details, respectively. Furthermore, there is the option to display a different image on the homepage to the publication detail page by setting `image_preview = "my-image.jpg"`. This can be useful if you wish to scale down the image for the homepage or simply if you just wish to show a different image for the preview.
+If you set `list_format=2` to enable a detailed listing of publications in the Publication Widget (`home/publications.md`) or Publication Archive (`publication/_index.md`), then there are a few more optional variables that you can include in the publication page preamble. You may use `abstract_short = "friendly summary of abstract"` and `publication_short = "abbreviated publication details"` to display a friendly summary of the abstract and abbreviate the publication details, respectively. Furthermore, there is the option to display a different image on the homepage to the publication detail page by setting `image_preview = "my-image.jpg"`. This can be useful if you wish to scale down the image for the homepage or simply if you just wish to show a different image for the preview.
 
 {{% alert warning %}}
 Any double quotes (`"`) or backslashes (e.g. LaTeX `\times`) occurring within the value of any frontmatter parameter (such as the *abstract*) should be escaped with a backslash (`\`). For example, the symbol `"` and LaTeX text `\times` become `\"` and `\\times`, respectively. Refer to the [TOML documentation](https://github.com/toml-lang/toml#user-content-string) for more info.
@@ -101,6 +101,24 @@ To create a talk:
     hugo new talk/my-talk-name.md
 
 Then edit the newly created file `content/talk/my-talk-name.md` with your full talk title and details. Note that many of the talk parameters are similar to the publication parameters.
+
+## Create a widget page
+
+So you would like to create a page which utilizes Academic's widget system, similar to the homepage?
+
+Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *courses* page by creating a `content/courses/` folder.
+
+Within your new `content/courses/` folder, create a file named `_index.md` containing the following parameters:
+
+```
++++
+title = "Courses"
+date = 2017-01-01
+widgets = true
++++
+```
+
+Install widgets into your `content/courses/` folder. To achieve this, widgets can be copied from your `content/home/` folder or downloaded from [Github](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/home).
 
 ## Create other pages (e.g. CV)
 

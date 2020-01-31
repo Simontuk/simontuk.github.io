@@ -10,20 +10,6 @@
 		<dict/>
 		<key>sheetClusters</key>
 		<dict>
-			<key>Untitled.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>527924846.839387</real>
-				<key>lastModification</key>
-				<real>527924846.839387</real>
-				<key>version</key>
-				<dict>
-					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>3</integer>
-				</dict>
-			</dict>
 			<key>_index.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -34,23 +20,31 @@
 					<integer>2</integer>
 				</dict>
 			</dict>
-			<key>getting-started.md</key>
+			<key>getting-started - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924837.07692599</real>
+				<real>531480275.52595299</real>
 				<key>version</key>
 				<dict>
+					<key>24c964a95b5dfce6be1b58fbdf7f1fa818568cc7d1ac99836d2a2e879a7f09e5</key>
+					<integer>6</integer>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>2</integer>
+					<integer>3</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+					<integer>1</integer>
 				</dict>
 			</dict>
-			<key>managing-content.md</key>
+			<key>managing-content - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924837.07692403</real>
+				<real>531480276.36754698</real>
 				<key>version</key>
 				<dict>
+					<key>24c964a95b5dfce6be1b58fbdf7f1fa818568cc7d1ac99836d2a2e879a7f09e5</key>
+					<integer>6</integer>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
+					<integer>3</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
 					<integer>2</integer>
 				</dict>
 			</dict>
@@ -64,24 +58,32 @@
 					<integer>2</integer>
 				</dict>
 			</dict>
-			<key>widgets.md</key>
+			<key>widgets - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924837.07692301</real>
+				<real>531480277.81968701</real>
 				<key>version</key>
 				<dict>
+					<key>24c964a95b5dfce6be1b58fbdf7f1fa818568cc7d1ac99836d2a2e879a7f09e5</key>
+					<integer>6</integer>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>2</integer>
+					<integer>3</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+					<integer>3</integer>
 				</dict>
 			</dict>
-			<key>writing-markdown-latex.md</key>
+			<key>writing-markdown-latex - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924837.07692701</real>
+				<real>531480284.91115499</real>
 				<key>version</key>
 				<dict>
+					<key>24c964a95b5dfce6be1b58fbdf7f1fa818568cc7d1ac99836d2a2e879a7f09e5</key>
+					<integer>6</integer>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>2</integer>
+					<integer>3</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+					<integer>4</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -99,19 +101,16 @@
 			<string>migrate-from-jekyll.md</string>
 		</array>
 		<array>
-			<string>widgets.md</string>
+			<string>widgets - 2.md</string>
 		</array>
 		<array>
-			<string>managing-content.md</string>
+			<string>managing-content - 2.md</string>
 		</array>
 		<array>
-			<string>getting-started.md</string>
+			<string>getting-started - 2.md</string>
 		</array>
 		<array>
-			<string>writing-markdown-latex.md</string>
-		</array>
-		<array>
-			<string>Untitled.md</string>
+			<string>writing-markdown-latex - 2.md</string>
 		</array>
 	</array>
 	<key>sheetOrder</key>
@@ -133,6 +132,8 @@
 			<integer>6</integer>
 			<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
 			<integer>3</integer>
+			<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+			<integer>4</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>

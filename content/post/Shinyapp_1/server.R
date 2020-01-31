@@ -1,32 +1,25 @@
 ## server.R
 
 library(shiny)
-library(ggplot2)
+
+dataset <- datasets::iris
 
 function(input, output) {
   
-  dataset <- reactive({
-    diamonds[sample(nrow(diamonds), input$sampleSize),]
+  # Combine the selected variables into a new data frame
+  selectedData <- reactive({
+    dataset[, c(input$xcol, input$ycol)]
   })
   
-  output$plot <- renderPlot({
-    
-    p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
-    
-    if (input$color != 'None')
-      p <- p + aes_string(color=input$color)
-    
-    facets <- paste(input$facet_row, '~', input$facet_col)
-    if (facets != '. ~ .')
-      p <- p + facet_grid(facets)
-    
-    if (input$jitter)
-      p <- p + geom_jitter()
-    if (input$smooth)
-      p <- p + geom_smooth()
-    
-    print(p)
-    
-  }, height=700)
+  clusters <- reactive({
+    kmeans(selectedData(), input$clusters)
+  })
   
+  output$kmeans <- renderPlot(height = 400, {
+    par(mar = c(5.1, 4.1, 0, 1))
+    plot(selectedData(),
+         col = clusters()$cluster,
+         pch = 20, cex = 3)
+    points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
+  })
 }

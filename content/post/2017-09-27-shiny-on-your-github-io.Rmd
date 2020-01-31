@@ -12,49 +12,77 @@ tags:
 runtime: shiny
 ---
 
-# How to write a .rmd so you will host a shiny application on your homepage in the end?
+# How to blog with an embedded shiny application
+
+The challenge to have a embedded shiny-applications is, that it needs to run on a public R-Server. 
+
+Link to [Tutorial](https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/) I'm following. 
 
 
-Create the UI for the app. Link to [Tutorial](https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/) I'm following.
+This allows you to create a Shinyapp and include it in a blogpost or rendered html Output of any sort.
+Here I will show how to create an simple example App, how to deploy it to shinyapps.io and how to include it in the html output of your Rmarkdown file.
+
+
+# Code to create a shiny app:
+Two files are needed to create a shiny app. `ui.R` and `server.R`
+
+The app will be created in the folder where your Rmarkdown is rendered. 
+The name of the folder could be the name of the App you want to create:
+
+```{r appname}
+appName <- "Shinyapp_1"
+```
 
 ## UI to create an interactive histogram:  
 
 saved as `Shinyapp_1/ui.R`
+
 ```{r ui, code=readLines("Shinyapp_1/ui.R"),eval=FALSE,background="#006EB8"}
 ```
 
 ## R script that works as the server logic:
 saved as `Shinyapp_1/server.R`
+
 ```{r server, code=readLines("Shinyapp_1/server.R"),eval=FALSE,background="#006EB8"}
 ```
 
 Simple call to open shiny webapp inside R terminal
-This does not work on your blogdown blog as it is a static website without any server-side R running.
+This does not work if you want to post an html independent of your local R-Session. To include a shiny app in your blog-post you need to publish the app to a r-server, as for example shinyapps.io. This is due to your github.io blog beign a static website without any server-side R running.
 
 
-```{r warning=FALSE}
-appName <- "Shinyapp_1"
+```{r eval=FALSE}
+shiny::shinyAppDir("Shinyapp_1/")
+```
+
+To deploy an app to shinyapps.io you need the package rsconnect and an account.  
+Here I will go through the steps to create a shiny app on shinyapps.io and link to it inside of you rmarkdown file.  
+Steps to set up your shinyapps.io account with rsconnect: 
+[shinapps.io](http://docs.rstudio.com/shinyapps.io/getting-started.html)
+First you need to connect your local r session to shinyapps.io:
+
+```{r, eval=FALSE}
+rsconnect::setAccountInfo(name='simontuk', token='<TOKEN>', secret='<SECRET>')
+```
+
+
+```{r warning=FALSE,echo=FALSE}
 appExists <- tolower(appName) %in% rsconnect::applications()$name
 ```
 
+Then you can deploy the app with rsconnect: 
+
 ```{r eval=!appExists}
-a <- rsconnect::deployApp("Shinyapp_1/",appName = tolower(appName),launch.browser = FALSE)
+rsconnect::deployApp("Shinyapp_1/",appName = tolower(appName),launch.browser = FALSE)
 ```
+
+The apps are hosted on shinyapps.io in the format:
+https://<<your_username>>.shinyapps.io/<<appName>>/
+With the help of the `knitr::include_app()` Function you can embedd the app we just created into the html that will be posted as a static file on your blog. The app will still run on shinyapps.io, but the user can interact with the app without leaving your blog post.
 
 ```{r}
 AppUrl <- paste0("https://simontuk.shinyapps.io/",tolower(appName),"/")
 
-```
-
-## So how to link to a runnign shiny app for interactive visualization?
-Here I will go through the steps to create a shiny app on shinyapps.io and link to it inside of you rmarkdown file.  
-
-
-Steps to set up your shinyapps.io account with rsconnect: 
-[shinapps.io](http://docs.rstudio.com/shinyapps.io/getting-started.html)
-
-```{r}
-knitr::include_app(AppUrl, 
+knitr::include_app(url = AppUrl,
   height = "600px")
 ```
 

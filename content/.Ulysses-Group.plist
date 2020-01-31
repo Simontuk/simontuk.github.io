@@ -2,42 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>collapsed</key>
+	<true/>
 	<key>createMarkedFile</key>
 	<false/>
 	<key>resolutionData</key>
 	<dict>
+		<key>collapsed</key>
+		<real>531480288.46562999</real>
 		<key>createMarkedFile</key>
 		<real>527966373.23884302</real>
 		<key>sheetClusters</key>
-		<dict>
-			<key>Untitled.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>528060068.89869499</real>
-				<key>lastModification</key>
-				<real>528060068.89869499</real>
-				<key>version</key>
-				<dict>
-					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>6</integer>
-					<key>8004599E-0FB6-4ED0-A2CA-4AF31CB7E3A7</key>
-					<integer>3</integer>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 		<key>sheetOrder</key>
 		<real>528059948.71880299</real>
 		<key>userIconName</key>
 		<real>528059970.885432</real>
 	</dict>
 	<key>sheetClusters</key>
-	<array>
-		<array>
-			<string>Untitled.md</string>
-		</array>
-	</array>
+	<array/>
 	<key>sheetOrder</key>
 	<string>manual</string>
 	<key>storeFormatVersion</key>
@@ -46,6 +29,11 @@
 	<string>Github</string>
 	<key>versioning</key>
 	<dict>
+		<key>collapsed</key>
+		<dict>
+			<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+			<integer>3</integer>
+		</dict>
 		<key>createMarkedFile</key>
 		<dict>
 			<key>24c964a95b5dfce6be1b58fbdf7f1fa818568cc7d1ac99836d2a2e879a7f09e5</key>

@@ -10,5 +10,3 @@ image = ""
 caption = ""
 
 +++
-
-{{< directoryindex path="/static/img" pathURL="/img" >}}

@@ -6,56 +6,16 @@
 	<dict>
 		<key>sheetClusters</key>
 		<dict>
-			<key>Untitled - 2.md</key>
+			<key>about - 2.md</key>
 			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>527924961.390423</real>
 				<key>lastModification</key>
-				<real>527924961.390423</real>
+				<real>531480264.91523498</real>
 				<key>version</key>
 				<dict>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
 					<integer>9</integer>
-				</dict>
-			</dict>
-			<key>Untitled - 3.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>527924952.31856698</real>
-				<key>lastModification</key>
-				<real>527924952.31856698</real>
-				<key>version</key>
-				<dict>
-					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>7</integer>
-				</dict>
-			</dict>
-			<key>Untitled.md</key>
-			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>527924956.868065</real>
-				<key>lastModification</key>
-				<real>527924956.868065</real>
-				<key>version</key>
-				<dict>
-					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>8</integer>
-				</dict>
-			</dict>
-			<key>about.md</key>
-			<dict>
-				<key>lastModification</key>
-				<real>527924924.51532102</real>
-				<key>version</key>
-				<dict>
-					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>2</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+					<integer>1</integer>
 				</dict>
 			</dict>
 			<key>contact.md</key>
@@ -68,54 +28,64 @@
 					<integer>2</integer>
 				</dict>
 			</dict>
-			<key>internships.md</key>
+			<key>internships - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924924.515329</real>
+				<real>531480268.17024601</real>
 				<key>version</key>
 				<dict>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
+					<integer>9</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
 					<integer>2</integer>
 				</dict>
 			</dict>
-			<key>posts.md</key>
+			<key>posts - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924924.51532602</real>
+				<real>531480269.30461401</real>
 				<key>version</key>
 				<dict>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>2</integer>
+					<integer>9</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+					<integer>3</integer>
 				</dict>
 			</dict>
-			<key>projects.md</key>
+			<key>projects - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924924.51532799</real>
+				<real>531480269.97722</real>
 				<key>version</key>
 				<dict>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>2</integer>
+					<integer>9</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+					<integer>4</integer>
 				</dict>
 			</dict>
-			<key>publications.md</key>
+			<key>publications - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924924.51532799</real>
+				<real>531480270.69536799</real>
 				<key>version</key>
 				<dict>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>2</integer>
+					<integer>9</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+					<integer>5</integer>
 				</dict>
 			</dict>
-			<key>publications_selected.md</key>
+			<key>publications_selected - 2.md</key>
 			<dict>
 				<key>lastModification</key>
-				<real>527924924.51532501</real>
+				<real>531480271.68956298</real>
 				<key>version</key>
 				<dict>
 					<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
-					<integer>2</integer>
+					<integer>9</integer>
+					<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+					<integer>6</integer>
 				</dict>
 			</dict>
 			<key>tags.md</key>
@@ -135,37 +105,28 @@
 	<key>sheetClusters</key>
 	<array>
 		<array>
-			<string>about.md</string>
-		</array>
-		<array>
-			<string>Untitled - 2.md</string>
-		</array>
-		<array>
-			<string>Untitled - 3.md</string>
-		</array>
-		<array>
-			<string>Untitled.md</string>
+			<string>about - 2.md</string>
 		</array>
 		<array>
 			<string>tags.md</string>
 		</array>
 		<array>
-			<string>publications_selected.md</string>
+			<string>publications_selected - 2.md</string>
 		</array>
 		<array>
-			<string>posts.md</string>
+			<string>posts - 2.md</string>
 		</array>
 		<array>
 			<string>contact.md</string>
 		</array>
 		<array>
-			<string>projects.md</string>
+			<string>projects - 2.md</string>
 		</array>
 		<array>
-			<string>publications.md</string>
+			<string>publications - 2.md</string>
 		</array>
 		<array>
-			<string>internships.md</string>
+			<string>internships - 2.md</string>
 		</array>
 	</array>
 	<key>sheetOrder</key>
@@ -178,6 +139,8 @@
 		<dict>
 			<key>6BC31610-C341-4A65-82E1-94F4BF72E95D</key>
 			<integer>9</integer>
+			<key>E32652C1-7DCB-4E6A-A1E3-2A14ADD54656</key>
+			<integer>6</integer>
 		</dict>
 		<key>sheetOrder</key>
 		<dict>
